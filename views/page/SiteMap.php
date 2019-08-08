@@ -6,8 +6,8 @@ if(isset($_SESSION['user'])){
             <div class="col-md">
                 <ul>
                     <li><a href="<?= routeUrl() ?>Home">Home</a></li>
-                    <li><a href="<?= routeUrl() ?>Farmers">Farmers</a></li>
-                    <li><a href="<?= routeUrl() ?>Products">Products</a></li>
+                    <li><a href="<?= routeUrl() ?>Farmers/1">Farmers</a></li>
+                    <li><a href="<?= routeUrl() ?>Products/1">Products</a></li>
                     <li><a href="<?= routeUrl() ?>Cart">Cart</a></li>
                 </ul>
             </div>
@@ -39,8 +39,8 @@ if(isset($_SESSION['user'])){
                 <p>Navigation</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Home">Home</a></li>
-                    <li><a href="<?= routeUrl() ?>Farmers">Farmers</a></li>
-                    <li><a href="<?= routeUrl() ?>Products">Products</a></li>
+                    <li><a href="<?= routeUrl() ?>Farmers/1">Farmers</a></li>
+                    <li><a href="<?= routeUrl() ?>Products/1">Products</a></li>
                     <li><a href="<?= routeUrl() ?>AddAnAd">Add an ad</a></li>
                     <li><a href="<?= routeUrl() ?>Cart">Cart</a></li>
                 </ul>
@@ -77,8 +77,8 @@ if(isset($_SESSION['user'])){
                 <p>Navigation</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Home">Home</a></li>
-                    <li><a href="<?= routeUrl() ?>Farmers">Farmers</a></li>
-                    <li><a href="<?= routeUrl() ?>Products">Products</a></li>
+                    <li><a href="<?= routeUrl() ?>Farmers/1">Farmers</a></li>
+                    <li><a href="<?= routeUrl() ?>Products/1">Products</a></li>
                     <li><a href="<?= routeUrl() ?>SignUp">Sign Up</a></li>
                     <li><a href="<?= routeUrl() ?>Login">Login</a></li>
                     <li><a href="<?= routeUrl() ?>SiteMap">SiteMap</a></li>

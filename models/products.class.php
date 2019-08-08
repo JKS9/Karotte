@@ -89,7 +89,6 @@ class products extends connect
         } else {
             $offset = 0;
         }
-        echo "SELECT * FROM `Produit` $query AND Actif= '1' LIMIT '$limit' OFFSET '$offset'";
         $req = $this -> _connect -> query("SELECT * FROM `Produit` $query AND Actif= '1' LIMIT $limit OFFSET $offset");
         $res = $req->fetchAll();
         return $res;

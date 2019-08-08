@@ -8,14 +8,9 @@
 }
 ~ EN COURS {
 
-~ back office
-
-
-~finir page ad produit (upload file);
-
 }
 
-
+~ back office
 
 55 BUGFIXING {
 

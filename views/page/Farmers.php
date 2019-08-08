@@ -11,8 +11,6 @@ include "controller/farmers.php";
 
         let urlfarmers = "http://localhost/Karotte/Farmers/filters/"+produitsFarmer+departmentFarmer+"/1";
 
-        $('#linksFarmers').html(urlfarmers);
-
         $('#linksFarmers').attr("href", urlfarmers);
 
     });

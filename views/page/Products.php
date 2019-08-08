@@ -15,7 +15,6 @@ include "controller/products.php";
 
         let urlf = 'http://localhost/Karotte/Products/filters/'+produits+department+poidsUnitaire+price+'/1';
 
-        $('#links').html(urlf);
 
         $('#links').attr("href", urlf);
 
