@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#D8EEC4;}
+	.st2{display:inline;}
+	.st3{fill:#3A7F0D;}
+	.st4{fill:#49A010;}
+	.st5{clip-path:url(#SVGID_2_);}
+	.st6{fill:#D8EEC4;}
+	.st7{clip-path:url(#SVGID_2_);fill:#3A7F0D;stroke:#3A7F0D;stroke-width:3;stroke-miterlimit:10;}
+	.st8{display:inline;clip-path:url(#SVGID_4_);}
+	.st9{display:inline;clip-path:url(#SVGID_4_);fill:#3A7F0D;stroke:#FFFFFF;stroke-width:30;stroke-miterlimit:10;}
+</style>
+<g class="st0">
+	<circle class="st1" cx="32" cy="32" r="32"/>
+	<g class="st2">
+		<path class="st3" d="M39.4,10.7c0,0,3.8,9.2-12.4,15.4c-8.8,3.4-15.5,12-7.5,25.3c0.7-5.9,3.5-19.1,15.8-22.1
+			c0,0-11.4,4.3-12.4,23.6c5.9,0.8,19.6,1.4,23.7-10.6C52.1,26.6,39.4,10.7,39.4,10.7z"/>
+		<path class="st4" d="M22.9,52.9c12.5-5,21.5-16.6,22.8-30.5c-2.5-6.9-6.3-11.6-6.3-11.6s3.8,9.2-12.4,15.4
+			c-8.8,3.4-15.5,12-7.5,25.3c0.7-5.9,3.5-19.1,15.8-22.1C35.4,29.3,24,33.6,22.9,52.9z"/>
+		<circle class="st3" cx="18.3" cy="25.2" r="1.2"/>
+		<g>
+			<circle class="st4" cx="22" cy="24.1" r="0.8"/>
+			<circle class="st4" cx="21.3" cy="16.2" r="2.1"/>
+			<circle class="st4" cx="27.7" cy="20.9" r="0.7"/>
+			<circle class="st4" cx="33.2" cy="17.2" r="1.9"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="32" cy="32" r="32"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st5">
+		<circle class="st6" cx="32" cy="32" r="32"/>
+		<g>
+			<path class="st3" d="M39.4,10.7c0,0,3.8,9.2-12.4,15.4c-8.8,3.4-15.5,12-7.5,25.3c0.7-5.9,3.5-19.1,15.8-22.1
+				c0,0-11.4,4.3-12.4,23.6c5.9,0.8,19.6,1.4,23.7-10.6C52.1,26.6,39.4,10.7,39.4,10.7z"/>
+			<path class="st4" d="M22.9,52.9c12.5-5,21.5-16.6,22.8-30.5c-2.5-6.9-6.3-11.6-6.3-11.6s3.8,9.2-12.4,15.4
+				c-8.8,3.4-15.5,12-7.5,25.3c0.7-5.9,3.5-19.1,15.8-22.1C35.4,29.3,24,33.6,22.9,52.9z"/>
+			<circle class="st3" cx="18.3" cy="25.2" r="1.2"/>
+			<g>
+				<circle class="st4" cx="22" cy="24.1" r="0.8"/>
+				<circle class="st4" cx="21.3" cy="16.2" r="2.1"/>
+				<circle class="st4" cx="27.7" cy="20.9" r="0.7"/>
+				<circle class="st4" cx="33.2" cy="17.2" r="1.9"/>
+			</g>
+		</g>
+	</g>
+	<line class="st7" x1="6.2" y1="57.8" x2="57.8" y2="6.2"/>
+</g>
+<g class="st0">
+	<defs>
+		<circle id="SVGID_3_" cx="-761.3" cy="-232.2" r="273.2"/>
+	</defs>
+	<clipPath id="SVGID_4_" class="st2">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st8">
+		<circle class="st6" cx="-761.3" cy="-232.2" r="273.2"/>
+		<g>
+			<path class="st3" d="M-698-414.1c0,0,32.1,78.6-105.6,131.5C-878.5-254-936-180.4-867.3-66.8c5.7-50.8,30.1-162.8,134.9-188.3
+				c0,0-97.6,36.5-106.2,201.6c50.1,7,167.7,11.8,202.6-90.3C-589.9-278.6-698-414.1-698-414.1z"/>
+			<path class="st4" d="M-838.6-54.2c106.4-42.5,183.9-142,194.6-260.8c-21.8-58.7-54-99.2-54-99.2s32.1,78.6-105.6,131.5
+				C-878.5-254-936-180.4-867.3-66.8c5.7-50.8,30.1-162.8,134.9-188.3C-732.5-255.1-829.7-218.7-838.6-54.2z"/>
+			<circle class="st3" cx="-878" cy="-290" r="10"/>
+			<g>
+				<circle class="st4" cx="-846.7" cy="-299.9" r="7.1"/>
+				<circle class="st4" cx="-853.1" cy="-367.4" r="17.8"/>
+				<circle class="st4" cx="-798.4" cy="-326.9" r="5.7"/>
+				<circle class="st4" cx="-750.7" cy="-358.9" r="16.3"/>
+			</g>
+		</g>
+	</g>
+	<line class="st9" x1="-991.6" y1="-13.6" x2="-550.5" y2="-454.7"/>
+</g>
+</svg>

@@ -1,0 +1,34 @@
+/* CSS */
+.navbar-inverse {
+    background-color: #323234;
+    border-color: #323234;
+}
+.navbar {
+    border-radius: unset;
+    margin: 0;
+}
+.navbar-nav {
+    float: right;
+}
+.navbar-brand {
+    padding: 5px 40px;
+}
+.navbar-inverse .navbar-nav  li  a {
+    color: #fff!important;
+    background-color: #323234;
+}
+.navbar-inverse .navbar-nav  li  a:hover {
+    color: #4bbdaa!important;
+}
+.dropdown-menu {
+    background-color: #323234;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    background-color: #323234;
+}
+.marginFooter {
+    margin: 0 auto;
+}
+.footerText {
+    text-align: center;
+}

@@ -1,0 +1,1 @@
+Activer / Désactiver un agriculteur

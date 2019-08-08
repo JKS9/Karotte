@@ -1,0 +1,172 @@
+/* CSS "all class" */
+.bar {
+    width: 70%;
+    background-color: #4bbdaa;
+    margin: 0 auto 15px auto;
+    height: 2px;
+    opacity: 0.8;
+}
+/* CSS "HOME" */
+.home_block_1_img {
+    background-image: url("../../images/photoSite/586084226-farm-wallpapers-desktop.jpg");
+    background-size: cover;
+    height: 600px;
+}
+.home_block_1_h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin: 10%;
+}
+.home_block_1_h1 strong {
+   color: #000;
+}
+.home_block_2 {
+    background-color: #323234;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.home_block_2 h2 {
+    text-align: center;
+    margin: 30px 0px;
+    font-weight: bold;
+    color: #fff;
+}
+.home_block_2 h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+}
+.home_block_2_row {
+    margin: 40px 0px 30px 0px;
+}
+.home_block_2_col {
+    margin: 15px 0px;
+}
+.home_block_2_glyphicon {
+    width: 50px;
+    padding: 0px 5px;
+    margin: 0 auto;
+}
+.home_block_3 {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.home_block_3 img {
+    width: 64px;
+    background-size: cover;
+}
+/* CSS "MENU" */
+.Menu {
+    background-color: #323234;
+}
+
+/* CSS "FOOTER" */
+.footer {
+    background-color: #4bbdaa;
+    color: #fff;
+}
+.footerStart {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footerStart p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.footerStart strong {
+    color: #e96530;
+}
+.network {
+    width: 345px;
+    margin: 0 auto;
+}
+.footerMiddle {
+    background-color: #323234;
+    color: #fff;
+}
+.marginFooter {
+    margin: 50px;
+}
+.marginFooterLog {
+    margin: 50px auto;
+}
+.footerUl {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footerUl p {
+    font-size: 1em;
+    font-weight: bold;
+}
+.footerUl ul {
+    padding: 0;
+    list-style: none;
+}
+.footerUl ul li {
+    padding: 4px;
+}
+.footerUl ul li a {
+    color: #fff!important;
+    text-decoration: none;
+}
+.footerUl ul li a:hover {
+    color: #4bbdaa!important;
+}
+.payment li {
+    display: inline;
+}
+.footerUl ul li:hover {
+    color: #4bbdaa;
+}
+.footerUl ul li .fa {
+    padding: 00px;
+}
+.footerEnd {
+    background-color: #4bbdaa;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+.footerEnd a {
+    font-weight: bold;
+    color: #323234;
+}
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}

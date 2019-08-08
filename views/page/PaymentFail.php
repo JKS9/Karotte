@@ -1,0 +1,1 @@
+<p>Le paiement à échouer</p>
