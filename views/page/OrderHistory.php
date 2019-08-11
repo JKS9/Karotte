@@ -4,21 +4,21 @@ include "controller/OrderHistory.php";
 if(isset($_SESSION['user'])){
     ?>
     <div class="container block_Ordder_history">
-        <div class="block_Ordder_history_info">
-            <div class="block_Ordder_history_info_title">
-                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"> Information</span>
+        <div class="row block_Ordder_history_info">
+            <div class="col-sm-12 block_Ordder_history_info_title">
+                <h4>Information :</h4>
             </div>
-            <div class="block_Ordder_history_info_danger">
-                <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= attente de validation de l'agriculteur</span>
+            <div class="col-sm-4 block_Ordder_history_info_danger">
+                <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                <p>Attente confirmation</p>
             </div>
-            <div class="block_Ordder_history_info_warning">
-                <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison en cours</span>
+            <div class="col-sm-4 block_Ordder_history_info_warning">
+                <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                <p>Livraison en cours</p>
             </div>
-            <div class="block_Ordder_history_info_success">
-                <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison faite</span>
+            <div class="col-sm-4 block_Ordder_history_info_success">
+                <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                <p>Livraison faite</p>
             </div>
         </div>
         <h2>Liste des commandes :</h2>
@@ -41,7 +41,7 @@ if(isset($_SESSION['user'])){
                     $color = '<div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>';
                 }
                 ?>
-                <div class="block_Ordder_history_order" style="border: 1px solid #000;">
+                <div class="block_Ordder_history_order">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="row">
@@ -147,27 +147,13 @@ if(isset($_SESSION['user'])){
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-lg-12">
-                            <?php
-                            $dlfacture = explode('/', $_GET['p']);
-                            ?>
-                            option et téléchargement :
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <p>Facture</p>
-                                    <a href="<?= routeUrl() ?>src/images/pdfFacture/<?= $orderId ?>_facture.pdf" target="_blank" download>
-                                        <button>Download</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <?php
             }
         }else{
             ?>
-            <div class="block_delivery_to_do_order">
+            <div class="block_delivery_no">
                 <p style="text-align: center">Vous n'avez pas de commande</p>
             </div>
             <?php
@@ -178,21 +164,21 @@ if(isset($_SESSION['user'])){
 }else{
     ?>
     <div class="container block_Ordder_history">
-        <div class="block_Ordder_history_info">
-            <div class="block_Ordder_history_info_title">
-                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"> Information</span>
+        <div class="row block_Ordder_history_info">
+            <div class="col-sm-12 block_Ordder_history_info_title">
+                <h4>Information :</h4>
             </div>
-            <div class="block_Ordder_history_info_danger">
-                <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= attente de validation de l'agriculteur</span>
+            <div class="col-sm-4 block_Ordder_history_info_danger">
+                <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                <p>Attente confirmation</p>
             </div>
-            <div class="block_Ordder_history_info_warning">
-                <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison en cours</span>
+            <div class="col-sm-4 block_Ordder_history_info_warning">
+                <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                <p>Livraison en cours</p>
             </div>
-            <div class="block_Ordder_history_info_success">
-                <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison faite</span>
+            <div class="col-sm-4 block_Ordder_history_info_success">
+                <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                <p>Livraison faite</p>
             </div>
         </div>
         <h2>Liste des commandes :</h2>
@@ -215,7 +201,7 @@ if(isset($_SESSION['user'])){
                     $color = '<div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>';
                 }
                 ?>
-                <div class="block_Ordder_history_order" style="border: 1px solid #000;">
+                <div class="block_Ordder_history_order">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="row">
@@ -278,7 +264,7 @@ if(isset($_SESSION['user'])){
                                     }
                                     ?>
                                     <tr>
-                                        <th style="text-align: center" scope="col"><a href="<?= routeUrl() ?>AdHistory/annonce=<?= $produit['Produit_id'] ?>/"><?= $produit['Produit_id']?></a></th>
+                                        <th style="text-align: center" scope="col"><a href="<?= routeUrl() ?>Products/produit=<?= $produit['Produit_id'] ?>/"><?= $produit['Produit_id']?></a></th>
                                         <th style="text-align: center" scope="col"><?= $produit['Liste_Produit_Name']?></th>
                                         <th style="text-align: center" scope="col"><?= $produit['Produit_Unit_Weight']?></th>
                                         <th style="text-align: center" scope="col"><?= $produit['Produit_prix']?>€</th>
@@ -321,27 +307,13 @@ if(isset($_SESSION['user'])){
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-lg-12">
-                            <?php
-                            $dlfacture = explode('/', $_GET['p']);
-                            ?>
-                            option et téléchargement :
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <p>Facture</p>
-                                    <a href="<?= routeUrl() ?>src/images/pdfFacture/<?= $orderId ?>_facture.pdf" target="_blank" download>
-                                        <button>Download</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <?php
             }
         }else{
             ?>
-            <div class="block_delivery_to_do_order">
+            <div class="block_delivery_no">
                 <p style="text-align: center">Vous n'avez pas de commande</p>
             </div>
             <?php

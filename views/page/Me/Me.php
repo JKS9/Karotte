@@ -2,21 +2,8 @@
 if(isset($_SESSION['farmer'])){
     ?>
     <div class="row block_account_me_row">
-        <div class="col-md-12">
-            <?php
-            $filename = "././src/images/Agriculteurs/".$idfarmer.".jpg";
-            if(file_exists($filename)) {
-                ?>
-                <img src="<?= routeUrl() ?>src/images/Agriculteurs/<?= $idfarmer ?>.jpg">
-                <?php
-            }else{
-                ?>
-                <img src="<?= routeUrl() ?>src/images/icone/iconeUsers/default.jpg" alt='icone defaut'/>
-                <?php
-            }
-            ?>
-        </div>
-        <div class="col-md-12">
+        <h4>Mes informations :</h4>
+        <div class="col-sm-8">
             <div class="block_account_me_info_name">
                 <?php
                 foreach($objProfile->infoUser($_SESSION['farmer']) as $info){
@@ -36,23 +23,12 @@ if(isset($_SESSION['farmer'])){
                 }
                 ?>
             </div>
-        </div>
-        <div class="col-md-12">
             <div class="block_account_me_info_type">
                 <?php
                 foreach($objProfile->infoFarmer($idfarmer) as $infoF){
                     ?>
                     <p><?= $infoF['Biography'] ?></p>
                     <?php
-                    if($infoF['Type'] == '1' ){
-                    ?>
-                        <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/biologic.svg" style="width: 55px;" alt="logo qualiter organic">
-                    <?php
-                    }else{
-                        ?>
-                        <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/no-biologic-green.svg" style="width: 55px;" alt="logo qualiter no-organic">
-                        <?php
-                    }
                 }
                 ?>
             </div>
@@ -77,7 +53,21 @@ if(isset($_SESSION['farmer'])){
                 ?>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-sm-4 image_Account">
+            <?php
+            $filename = "././src/images/Agriculteurs/".$idfarmer.".jpg";
+            if(file_exists($filename)) {
+                ?>
+                <img src="<?= routeUrl() ?>src/images/Agriculteurs/<?= $idfarmer ?>.jpg">
+                <?php
+            }else{
+                ?>
+                <img src="<?= routeUrl() ?>src/images/icone/iconeUsers/default.jpg" alt='icone defaut'/>
+                <?php
+            }
+            ?>
+        </div>
+        <div class="col-sm-12 button_account">
             <a href="<?= routeUrl() ?>Account/Profil/Edit">éditer profil</a>
         </div>
     </div>
@@ -85,7 +75,8 @@ if(isset($_SESSION['farmer'])){
 }else{
     ?>
     <div class="row block_account_me_row">
-        <div class="col-md-12">
+        <h4>Mes informations :</h4>
+        <div class="col-sm-12">
             <div class="block_account_me_info_name">
                 <?php
                 foreach($objProfile->infoUser($_SESSION['user']) as $info){
@@ -106,7 +97,7 @@ if(isset($_SESSION['farmer'])){
                 }
                 ?>
             </div>
-            <div class="block_account_me_info_edit">
+            <div class="button_account">
                 <a href="<?= routeUrl() ?>Account/Profil/Edit">éditer profil</a>
             </div>
         </div>

@@ -64,7 +64,7 @@ if(isset($_POST['addCarts'])){
         }
     }else{
         $erreurAdd =  "<div class='alert alert-danger' role='alert'>
-                Veuillez vous coonecter pour ajouter un produit à votre panier :
+                Veuillez vous conecter pour ajouter un produit à votre panier :
             </div>";
     }
 }

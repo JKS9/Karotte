@@ -110,6 +110,8 @@ if(isset($_POST['NewProducts'])){
 
     if (move_uploaded_file($_FILES['FileNewProducts']['tmp_name'],$uploaddir.$Name.'.jpg')) {
 
+        $addProduitListeProduit = $objProducts->AddProduitAdmin($Name);
+
         $errorAddproduits = "
         <div class='alert alert-success' role='alert'>
             Votre demande à été envoi à un administrateur : fichier valide
@@ -123,5 +125,6 @@ if(isset($_POST['NewProducts'])){
         </div>";
         return $errorAddproduits;
     }
+
 }
 ?>

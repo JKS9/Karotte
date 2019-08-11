@@ -11,7 +11,7 @@
                 </p>
             </div>
             <div class="block_Ad_Historie_2_Produit_info_poids_prix">
-                <p> vandu par format de : <strong><?= $product['UnitWeight'] ?></strong></p>
+                <p> vendu par format de : <strong><?= $product['UnitWeight'] ?></strong></p>
                 <p>vendu au prix de : <strong><?= $product['Prix'] ?>€</strong> /
                     <strong><?= $product['UnitWeight'] ?></strong></p>
                 <p>biographie :</p>
@@ -66,15 +66,15 @@
                 }
                 ?>
             </div>
-            <div class="block_Ad_Historie_2_Produit_info_qualiter_option">
-                <div class="block_Ad_Historie_2_Produit_info_qualiter_option_title">
+            <div class="row block_Ad_Historie_2_Produit_info_qualiter_option">
+                <div class="col-sm-12 block_Ad_Historie_2_Produit_info_qualiter_option_title">
                     <p>option du produit :</p>
                 </div>
-                <div class="block_Ad_Historie_2_Produit_info_qualiter_option_lien">
+                <div class="col-sm-4 block_Ad_Historie_2_Produit_info_qualiter_option_lien" style="margin: 25px 0px;">
                     <a href="<?= routeUrl() ?><?= $explode['0'] ?>/<?= $explode['1'] ?>/Modification">Modifier
                         Annnonces</a>
                 </div>
-                <div class="block_Ad_Historie_2_Produit_info_qualiter_option_lien">
+                <div class="col-sm-4 block_Ad_Historie_2_Produit_info_qualiter_option_lien" style="margin: 25px 0px;">
                     <a href="<?= routeUrl() ?><?= $explode['0'] ?>/<?= $explode['1'] ?>/Livraison">Visualiser
                         les livraisons faite</a>
                 </div>

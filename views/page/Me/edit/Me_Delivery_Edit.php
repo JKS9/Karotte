@@ -9,6 +9,7 @@ if(isset($_SESSION['farmer'])){
         if($nbVerif == '1'){
             ?>
             <div class="row Block_Delivery_Edit_From">
+                <h4>Modifier mon adresse de livraison :</h4>
                 <?= $errorinfoDelivery ?>
                 <form method="post">
                     <?php
@@ -60,7 +61,7 @@ if(isset($_SESSION['farmer'])){
                             <label>Phone :</label>
                             <input type="number" name="Phone" value="<?= $delivery['Phone']?>">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 editDeliveryOne">
                             <input type="submit" name="infoDelivery" value="sauvgarder">
                         </div>
                         <?php
@@ -94,6 +95,7 @@ if(isset($_SESSION['farmer'])){
         if($nbVerif == '1'){
             ?>
             <div class="row Block_Delivery_Edit_From">
+                <h4>Modifier mon adresse de livraison :</h4>
                 <?= $errorinfoDelivery ?>
                 <form method="post">
                     <?php
@@ -145,7 +147,7 @@ if(isset($_SESSION['farmer'])){
                             <label>Phone :</label>
                             <input type="number" name="Phone" value="<?= $delivery['Phone']?>">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 editDeliveryOne">
                             <input type="submit" name="infoDelivery" value="sauvgarder">
                         </div>
                         <?php

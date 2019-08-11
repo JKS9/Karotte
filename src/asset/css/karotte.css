@@ -170,3 +170,780 @@
     background: #cb2027;
     color: white;
 }
+
+/* Page Home */
+.Home_block_5 {
+    text-align: center;
+    background-color: #3b5998;
+    padding: 15px 0px;
+    margin-bottom: 40px;
+    margin-top: 25px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Page famrer */
+.farmers_block {
+    margin: 20px auto;
+}
+.farmers_block h2 {
+    margin-bottom: 15px;
+}
+.farmers_block_1 {
+    margin: 10px 0px;
+    border-right: 2px solid #4bbdaa;
+}
+.products_block_1_form_1 {
+    margin: 20px 0px;
+    font-weight: bold;
+    color: #4bbdaa;
+}
+.products_block_1_form_2 {
+    color: #4bbdaa;
+    font-weight: bold;
+}
+.products_block_1_form_line {
+    height: 20px;
+}
+.products_block_1_form_input_title {
+    float: left;
+    color: #000;
+}
+.products_block_1_form_input input {
+    float: right;
+}
+.farmers_block_1_form_1 {
+    margin: 20px 0px;
+    font-weight: bold;
+    color: #4bbdaa;
+}
+.farmers_block_1_form_line {
+    height: 20px;
+}
+.farmers_block_1_form_input_title {
+    float: left;
+    color: #000;
+    font-weight: bold;
+}
+.farmers_block_1_form_input input {
+    float: right;
+}
+.filters_block_1_form_submit {
+    text-align: center;
+    margin: 30px 0px 20px 0px;
+    font-weight: bold;
+}
+.filters_block_1_form_submit a {
+    padding: 6px 15px;
+    background: #236492;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.Agriculteur a {
+    text-decoration: none;
+}
+.agriculteur_picture img {
+    width: 100%;
+}
+.agriculteur_Name {
+    text-align: center;
+    margin: 10px 0px 5px 0px;
+}
+.agriculteur_picture_departement {
+    width: 110px;
+    margin: 0 auto;
+    text-align: center;
+}
+.agriculteur_picture_departement img {
+    width: 40px;
+}
+.no-agriculteur p {
+    margin: 15px 0px 0px 15px;
+    color: white;
+    padding: 5px;
+    background: #236492;
+    border-radius: 3px;
+}
+.farmers_block_2_select_farmer {
+    padding: 20px 0px 0px 0px;
+}
+.farmer_picture_name_type {
+
+}
+.farmer_name {
+    font-size: 25px;
+    text-align: center;
+    padding: 8px 0px;
+}
+.farmer_name p{
+    margin: 0;
+}
+.products_block_2_select_produit_info_biography {
+    text-align: center;
+    background: #fafafa;
+    padding: 10px 0px;
+    border-radius: 4px;
+}
+.products_block_2_select_produit_info_biography strong {
+    font-size: 13px;
+}
+.products_block_2_select_produit_info_biography p {
+    margin: 0;
+    padding: 5px 0px 15px 0px;
+}
+.products_block_2_select_produit_info_flag {
+    width: 110px;
+    margin: 10px auto;
+    text-align: center;
+}
+.products_block_2_select_produit_info_flag img {
+    width: 60px;
+}
+.products_block_2_select_produit_info_ferme p {
+    margin: 0;
+}
+.farmer_picture {
+    width: 250px;
+    margin: 0 auto;
+}
+.farmer_picture img{
+    width: 100%;
+}
+.produit a{
+    text-decoration: none;
+}
+.produit_picture {
+    width: 120px;
+    margin: 0 auto;
+}
+.produit_info {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* page Produits */
+.products_block_2_select_produit_info_name {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.products_block_2_select_produit_info_name p{
+    margin: 0px 0px 5px 0px;
+}
+.products_block_2_select_produit_info {
+    background: #4bbdaa;
+    border-radius: 3px;
+}
+.products_block_2_select_produit_info_image {
+    width: 200px;
+    margin: 8px auto;
+}
+.products_block_2_select_produit_info_image img{
+    width: 100%;
+}
+.products_block_2_select_produit_info_flag_biography {
+    margin: 10px 0px;
+}
+.products_block_2_select_produit_add_carts {
+    margin: 20px 0px 15px 0px;
+    text-align: center;
+}
+.products_block_2_select_produit_add_carts select {
+    width: 150px;
+    padding: 5px;
+    border: none;
+    background: #4bbdaa;
+    border-radius: 5px;
+    color: #fff;
+}
+.products_block_2_select_produit_info_farmer_add_2 {
+    margin-bottom: 12px;
+}
+.products_block_2_select_produit_add_carts input {
+    border: none;
+    background: #4bbdaa;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 3px;
+}
+.products_block_2_select_produit_info_farmer_a p {
+    text-align: end;
+}
+.products_block_2_select_produit_info_farmer_a a {
+    text-decoration: none;
+    background: #236492;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+/* Page SignUp */
+.register_block {
+    margin-top: 35px;
+}
+.register_block_1_button {
+    width: 120px;
+    margin: 20px auto;
+    text-align: center;
+    background: #236492;
+    padding: 30px 0px;
+    border-radius: 4px;
+}
+.register_block_2_users_form {
+    margin: 0px 0px 35px 0px;
+}
+.register_block_1_button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.input_register_user input {
+    border: none;
+    background: #f0f0f0;
+    opacity: 0.8;
+    padding: 5px 9px;
+}
+.input_register_user_button {
+    margin-top: 20px;
+}
+.input_register_user_button input {
+    background: #f28853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 3px;
+}
+.register_block_2_farmer_form {
+    margin-bottom: 30px;
+}
+.input_register_farmer input {
+    border: none;
+    background: #f0f0f0;
+    opacity: 0.8;
+    padding: 5px 9px;
+    margin-bottom: 10px;
+}
+.input_register_farmer select {
+    width: 200px;
+    border: none;
+    background: #f3f3f3;
+    padding: 3px;
+    color: #a1a1a1;
+}
+.input_register_farmer_button {
+    margin-top: 20px;
+}
+.input_register_farmer_button input {
+    background: #f28853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 3px;
+}
+.input_register_user {
+    margin: 10px 0px;
+}
+
+/* Page Login */
+.login_block_form {
+    margin: 10% auto;
+    text-align: center;
+}
+.login_block_form h4{
+    margin-bottom: 12px;
+}
+.login_block_2_img {
+    margin: 25px auto;
+    width: 80%;
+}
+.input_Login input {
+    border: none;
+    background: #f0f0f0;
+    opacity: 0.8;
+    padding: 5px 9px;
+    margin-bottom: 10px;
+}
+.input_Button_login input {
+     background: #f28853;
+     border: none;
+     color: #fff;
+     font-weight: bold;
+     padding: 7px 20px;
+     border-radius: 3px;
+     margin-top: 15px;
+ }
+.SiteMap_block {
+    margin: 15px auto;
+    text-align: center;
+}
+.SiteMap_block_1 {
+    text-align: center;
+}
+.SiteMap_block ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* Page Add */
+.addAnAd_Block {
+    margin: 15px auto 30px auto;
+}
+.addAnAd_Block_form_1 h4 {
+    text-align: center;
+}
+.addAnAd_Block_form_1_block {
+    width: 300px;
+    margin: 0 auto;
+    background: #236492;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+}
+.addAnAd_Block_form_1_input p {
+    margin: 0px 0px 5px 0px;
+    font-weight: bold;
+}
+.addAnAd_Block_form_1_input input {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #fff;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.addAnAd_Block_form_1_input select {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.addAnAd_Block_form_1_input textarea {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+    resize: none;
+    height: 80px;
+}
+.addAnAd_Block_form_1_submit input {
+    background: #f28853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.addAnAd_Block_form_2 h4 {
+    text-align: center;
+}
+.addAnAd_Block_form_2_block {
+     width: 300px;
+     margin: 0 auto;
+     background: #236492;
+     border-radius: 3px;
+     padding: 15px 10px;
+     color: #fff;
+     text-align: start;
+}
+.addAnAd_Block_form_2_title p {
+    margin: 0;
+    font-weight: bold;
+}
+.addAnAd_Block_form_2_input {
+    text-align: center;
+}
+.addAnAd_Block_form_2_input p {
+    margin: 10px 0px 5px 0px;
+    font-weight: bold;
+}
+.addAnAd_Block_form_2_input input {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.addAnAd_Block_form_2_input_file {
+    text-align: center;
+}
+.addAnAd_Block_form_2_input_file input{
+    width: 250px;
+    margin: 0px auto 10px auto;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.addAnAd_Block_form_2_submit input {
+    background: #f28853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.addAnAd_Block_form_2_submit {
+    text-align: center;
+}
+
+/* Page Carts */
+.cartsAdd {
+    border: none;
+    background: #4bbdaa;
+    color: #fff;
+}
+.block_Carts_2_livraison {
+    background: #f0f0f0;
+    border-radius: 3px;
+    width: 300px;
+    padding-left: 8px;
+    margin-left: 15px;
+}
+.block_Carts_2_livraison:hover {
+    background: #236492;
+    color: #fff;
+}
+.payments {
+    text-align: center;
+}
+.ButtonPay {
+    background: #f28853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 3px;
+    margin: 10px 15px;
+}
+
+/* Page Account */
+.block_account_row {
+    margin: 30px auto;
+}
+.block_account_row p {
+    padding: 7px 15px;
+    width: 250px;
+    background: #f0f0f0;
+    border-radius: 3px;
+}
+.image_Account img {
+    width: 100%;
+}
+.button_account {
+    text-align: center;
+}
+.button_account a {
+    background: #f28853;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+.block_account_me_edit input{
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.editAccount input{
+    width: 80px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.editAccountend input{
+    width: 100px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.textArea_account textarea {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+    resize: none;
+    height: 80px;
+}
+.region_account select {
+    width: 200px;
+    border: none;
+    background: #f3f3f3;
+    padding: 3px;
+    color: #000;
+}
+
+/* Page delivery */
+.form_delivery input {
+    width: 100px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.edit_delivery a {
+    width: 100px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #236492;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.block_account_delivery_add input{
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.region_delivery select {
+    width: 200px;
+    border: none;
+    background: #f3f3f3;
+    padding: 3px;
+    color: #000;
+}
+.editDeliveryend input {
+    width: 160px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.Block_Delivery_Edit_From input {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.Block_Delivery_Edit_From select {
+    width: 200px;
+    border: none;
+    background: #f3f3f3;
+    padding: 3px;
+    color: #000;
+}
+.editDeliveryOne input {
+    width: 160px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Page Messagerie */
+.MessagerieBackground {
+    background: #f0f0f0;
+    height: 500px;
+    border-radius: 4px;
+    padding: 10px 5px;
+}
+#messageri {
+    overflow: auto;
+    background: #fff;
+    height: 420px;
+    padding: 0;
+}
+.inputMessageri input {
+    width: 100%;
+    margin: 5px 0px;
+    padding: 5px 5px;
+    height: 40px;
+    border: none;
+}
+.buttonMessagerie input {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.Virement_info_form input {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+}
+.addBank input {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Page OrderHistory */
+.block_Ordder_history {
+    margin: 30px auto;
+}
+.block_Ordder_history_info  {
+    background: #f0f0f0;
+    border-radius: 3px;
+}
+.block_Ordder_history_info p {
+    text-align: center;
+    color: #000;
+}
+.block_Ordder_history_order {
+    border: 2px solid #4bbdaa;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 3px;
+    margin: 10px 0px 20px 0px;
+}
+.block_delivery_no {
+    background: #f2dede;
+    margin: 0 auto;
+    width: 250px;
+    padding: 7px 0px;
+}
+.block_delivery_no p {
+    margin: 0;
+    color: grey;
+}
+
+/* Page Delivery */
+.filtreDeliverydiv {
+    margin: 5px 0px;
+}
+.filtreDeliverydiv a {
+    padding: 6px 15px;
+    background: #236492;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.EnvoyerColis {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Page Add History */
+.block_Ad_Historie {
+    margin: 30px auto;
+}
+.block_Ad_Historieno {
+    margin: 25px auto;
+    padding: 15px 10px;
+    background: #4bbdaa;
+    color: #fff;
+    border-radius: 3px;
+}
+.block_Ad_HistorieNoSelect {
+    margin: 25px auto;
+    padding: 10px 15px;
+    background: #4bbdaa;
+    color: #fff;
+    border-radius: 3px;
+}
+.block_Ad_HistorieNoSelect p{
+    margin: 0px;
+}
+.block_Ad_Historie_2_Produit_info_qualiter_option_lien a {
+    background: #337ab7;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.textBio textarea {
+    width: 250px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    background: #f0f0f0;
+    color: #a1a1a1;
+    padding: 5px;
+    border-radius: 3px;
+    resize: none;
+    height: 80px;
+}
+.textBio input {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.DELETE input {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}

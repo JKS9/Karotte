@@ -1,5 +1,4 @@
 <?php
-
 if (strpos($_GET['p'], '/filters/') !== false) {
     include "controller/filters/filtersProduits.php";
 } else {

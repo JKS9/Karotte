@@ -13,64 +13,58 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
     $image = $objProducts->listeProduit($IdListeProduit) . ".jpg";
     ?>
     <div class="products_block_2_select_produit">
-        <div class="products_block_2_select_produit_info">
+        <?= $erreurAdd ?>
+        <div class="col-sm-6 products_block_2_select_produit_info_prix_UnitWeight_Stock">
+            <div class=" row products_block_2_select_produit_info_name">
+                <div class="col-sm-6">
+                    <p><?= $objProducts->listeProduit($r['IdListeProduit'])?></p>
+                </div>
+                <div class="col-sm-6">
+                    <p><strong><?= $Prix ?>€</strong></p>
+                </div>
+                <div class="col-sm-6">
+                    <p>stock :<strong><?= $NbStock ?>kg</strong><span class="glyphicon glyphicon-grain"></span></p>
+                </div>
+                <div class="col-sm-6">
+                    <p><strong><?= $UnitWeight ?></strong><span class="glyphicon glyphicon-stats"></span></p>
+                </div>
+                <div class="col-sm-12">
+                    <?php
+                    if ($Qualiter == '1') {
+                        ?>
+                        <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/biologic.svg" style="width: 55px;margin-top: 15px;"
+                             alt="logo qualiter organic">
+                        <?php
+                    } else {
+                        ?>
+                        <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/no-biologic-green.svg" style="width: 55px;margin-top: 15px;"
+                             alt="logo qualiter no-organic">
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="products_block_2_select_produit_add_carts">
+                <form method="post">
+                    <select name="nbProduits">
+                        <?php
+                        for ($i = 1; $i <= 10; $i++) {
+                            ?>
+                            <option value='<?= $i ?>'><?= $i ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                    <input type="submit" name="addCarts" value="Ajouter au panier">
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-6 products_block_2_select_produit_info">
             <div class="products_block_2_select_produit_info_image">
                 <img src="<?= routeUrl() ?>src/images/produits/<?= $image ?>" alt="image produit"/>
             </div>
-            <div class="products_block_2_select_produit_info_qualiter">
-                <?php
-                if ($Qualiter == '1') {
-                    ?>
-                    <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/biologic.svg" style="width: 55px;"
-                         alt="logo qualiter organic">
-                    <?php
-                } else {
-                    ?>
-                    <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/no-biologic-green.svg" style="width: 55px;"
-                         alt="logo qualiter no-organic">
-                    <?php
-                }
-                ?>
-            </div>
-            <div class="products_block_2_select_produit_info_prix_UnitWeight_Stock">
-                <div class="products_block_2_select_produit_info_prix">
-                    <p>Prix de vente :</p>
-                    <strong><?= $Prix ?></strong>
-                    <span class="glyphicon glyphicon-euro"></span>
-                </div>
-                <div class="products_block_2_select_produit_info_UnitWeight">
-                    <p>Vendu par quantituer de :</p>
-                    <strong><?= $UnitWeight ?></strong>
-                    <span class="glyphicon glyphicon-stats"></span>
-                </div>
-                <div class="products_block_2_select_produit_info_UnitWeight">
-                    <p>Nombre en stock encore :</p>
-                    <strong><?= $NbStock ?>kg</strong>
-                    <span class="glyphicon glyphicon-grain"></span>
-                </div>
-                <div class="products_block_2_select_produit_add_carts">
-                    <form method="post">
-                        <div class="products_block_2_select_produit_add_carts_form_select">
-                            <select name="nbProduits">
-                                <?php
-                                for ($i = 1; $i <= 10; $i++) {
-                                    ?>
-                                    <option value='<?= $i ?>'><?= $i ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="products_block_2_select_produit_add_carts_form_submit">
-                            <input type="submit" name="addCarts" value="Ajouter au panier">
-                        </div>
-                    </form>
-                    <?= $erreurAdd ?>
-                </div>
-            </div>
         </div>
-
-        <div class="products_block_2_select_produit_info_flag_biography">
+        <div class="col-sm-12 products_block_2_select_produit_info_flag_biography">
             <div class="products_block_2_select_produit_info_biography">
                 <strong>Description :</strong>
                 <p><?= $Biographie ?></p>
@@ -95,7 +89,7 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
                 ?>
             </div>
         </div>
-        <div class="products_block_2_select_produit_info_farmer">
+        <div class="col-sm-12 products_block_2_select_produit_info_farmer">
             <?php
             foreach ($objProducts->idUserFarmer($IdFarmers) as $farmer) {
                 $id = $farmer['Id'];
@@ -119,32 +113,31 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
 
                 ?>
                 <div class="row products_block_2_select_produit_info_farmer_add">
-                    <p>information sur l'annonceur :</p>
-                    <div class="products_block_2_select_produit_info_farmer_name">
-                        <span>
-                            Nom : <?= $LastName ?>
-                        </span>
-                        <span>
-                            Prénom : <?= $name ?>
-                        </span>
-                        <p>
-                            <strong>
-                                <a href="<?= routeUrl() ?>Farmers/agriculteur=<?= $id ?>">
-                                    visité la ferme
-                                </a>
-                            </strong>
-                        </p>
-                        <br>
+                    <h4>information sur l'annonceur :</h4>
+                    <div class="col-sm-8 row products_block_2_select_produit_info_farmer_name">
+                        <div class="col-sm-6">
+                            <p>
+                                Nom : <?= $LastName ?> <?= $name ?>
+                            </p>
+                        </div>
+                        <div class="col-sm-6 products_block_2_select_produit_info_farmer_a">
+                            <p>
+                                <strong>
+                                    <a href="<?= routeUrl() ?>Farmers/agriculteur=<?= $id ?>">
+                                        visité la ferme
+                                    </a>
+                                </strong>
+                            </p>
+                        </div>
                     </div>
-                    <div class="products_block_2_select_produit_info_farmer_add_2">
-                        <span>
-                            adresse : <?= $roadNumber . " " . $Road . " " . $RoadName ?>
-                        </span>
-                        <span>
-                            ville : <?= $City . ", " . $PostalCode ?>
-                        </span>
-                        <span>
-                            département :
+                    <div class="col-sm-12 products_block_2_select_produit_info_farmer_add_2">
+                        <p>
+                            <?= $roadNumber . " " . $Road . " " . $RoadName ?>
+                        </p>
+                        <p>
+                            <?= $City . ", " . $PostalCode ?>
+                        </p>
+                        <p>
                             <?php
                             foreach ($objProducts->flagRegion($Region) as $flag) {
                                 ?>
@@ -152,10 +145,10 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
                                 <?php
                             }
                             ?>
-                        </span>
-                        <span>
-                            Pays : <?= $County ?>
-                        </span>
+                        </p>
+                        <p>
+                            <?= $County ?>
+                        </p>
                     </div>
                 </div>
                 <?php

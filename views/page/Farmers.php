@@ -18,7 +18,7 @@ include "controller/farmers.php";
 <section>
     <div class="container farmers_block">
         <div class="row">
-            <div class="col-lg-2 farmers_block_1">
+            <div class="col-sm-3 farmers_block_1">
                 <form method="post">
                     <div id="minimis_products" class="products_block_1_form_1">
                         <p>Produits</p>
@@ -49,7 +49,7 @@ include "controller/farmers.php";
                             ?>
                             <div class='farmers_block_1_form_line'>
                                 <div class='farmers_block_1_form_input_title'>
-                                    <span><?= $value ?>(<?= $key ?>)</span>
+                                    <span><?= $value ?></span>
                                 </div>
                                 <div class='farmers_block_1_form_input'>
                                     <input type='radio' id="checkFarmer" name='departmentFarmer' value='<?= $key ?>'>
@@ -60,15 +60,18 @@ include "controller/farmers.php";
                         ?>
                     </div>
                     <hr>
-                    <div class="farmers_block_1_form_submit">
-                        <a href="http://localhost/Karotte/Farmers/" id="linksFarmers">http://localhost/Karotte/Farmers/</a>
+                    <div class="filters_block_1_form_submit">
+                        <a href="http://localhost/Karotte/Farmers/" id="linksFarmers">rechercher</a>
                     </div>
                 </form>
             </div>
-            <div class="col-lg-10 farmers_block_2">
-                <?php
-                include "controller/display/displayFarmers.php";
-                ?>
+            <div class="col-sm-9 farmers_block_2">
+                <h2>Nos agriculteurs :</h2>
+                <div class="row">
+                    <?php
+                    include "controller/display/displayFarmers.php";
+                    ?>
+                </div>
             </div>
         </div>
     </div>

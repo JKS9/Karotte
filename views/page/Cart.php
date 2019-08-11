@@ -28,7 +28,7 @@ if ($size != 0) {
     ?>
     <div class="container block_Carts">
         <div class="row">
-            <div class="col-lg-8 block_Carts_1">
+            <div class="col-sm-12 block_Carts_1">
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -87,13 +87,13 @@ if ($size != 0) {
                             <th style="text-align: center" scope="row">
                                 <form method="post">
                                     <input type="hidden" name="produit" value="<?= $id ?>"/>
-                                    <input type="submit" name="add1" value="+"/>
+                                    <input class="cartsAdd" type="submit" name="add1" value="+"/>
                                 </form>
                             </th>
                             <th style="text-align: center" scope="row">
                                 <form method="post">
                                     <input type="hidden" name="produit" value="<?= $id ?>"/>
-                                    <input type="submit" name="no1" value="-"/>
+                                    <input class="cartsAdd" type="submit" name="no1" value="-"/>
                                 </form>
                             </th>
                         </tr>
@@ -163,27 +163,27 @@ if ($size != 0) {
                     </tr>
                     </tbody>
                 </table>
-                <div class="col-lg-4 block_Carts_2">
-                    <form method="post">
-                        <a href="<?= routeUrl() ?>Account/Livraison">Ajouter une adresse de livraison</a>
-                        <label <?= $errorDelivery ? 'style="color: red"' : '' ?> >Adresse de livraison :</label>
-                        <?php
-                        foreach ($objCarts->selectAdresseLivraison($session) as $inputlivraison) {
-                            ?>
-                            <div class="block_Carts_2_livraison">
-                                <input type="radio" value="<?= $inputlivraison['Id'] ?>" name="delivery"/>
-                                <p><?= $inputlivraison['RoadNumber'] . ' ' . $inputlivraison['Road'] . ' ' . $inputlivraison['RoadName']?>,</p>
-                                <p><?= $inputlivraison['PostalCode'] . ', ' . $inputlivraison['City']?></p>
-                                <p><?= $inputlivraison['County'] ?></p>
-                                <hr>
-                            </div>
-                            <?php
-                        }
+            </div>
+            <div class="col-sm-12 row block_Carts_2">
+                <form method="post">
+                    <a href="<?= routeUrl() ?>Account/Livraison">Ajouter une adresse de livraison</a>
+                    <h4 <?= $errorDelivery ? 'style="color: red"' : '' ?> >Adresse de livraison :</h4>
+                    <?php
+                    foreach ($objCarts->selectAdresseLivraison($session) as $inputlivraison) {
                         ?>
-                        <br/>
-                        <input type="submit" name="pay" value="Payer"/>
-                    </form>
-                </div>
+                        <div class="col-sm-4 block_Carts_2_livraison">
+                            <input type="radio" value="<?= $inputlivraison['Id'] ?>" name="delivery"/>
+                            <p><?= $inputlivraison['RoadNumber'] . ' ' . $inputlivraison['Road'] . ' ' . $inputlivraison['RoadName']?>,</p>
+                            <p><?= $inputlivraison['PostalCode'] . ', ' . $inputlivraison['City']?></p>
+                            <p><?= $inputlivraison['County'] ?></p>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <div class="col-sm-12 payments">
+                        <input class="ButtonPay" type="submit" name="pay" value="Payement"/>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -15,11 +15,8 @@ foreach ($Farmers as $farmers) {
         $nameFarmer = $farmerP['Name'];
         $LastNameFaemer = $farmerP['LastName'];
         ?>
-        <div class="agriculteur">
+        <div class="col-sm-3 Agriculteur">
             <a href="<?= routeUrl() ?>Farmers/agriculteur=<?= $idFarmers ?>">
-                <div class="agriculteur_Name">
-                    <p><strong><?= $LastNameFaemer . ' ' . $nameFarmer ?></strong></p>
-                </div>
                 <div class="agriculteur_picture">
                     <?php
                     $filename = "././src/images/Agriculteurs/".$idFarmers.".jpg";
@@ -34,18 +31,8 @@ foreach ($Farmers as $farmers) {
                     }
                     ?>
                 </div>
-                <div class="agriculteur_Type">
-                    <?php
-                    if ($TypeFarmer == '1') {
-                        ?>
-                        <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/biologic.svg" style="width: 55px;" alt="logo qualiter organic">
-                        <?php
-                    } else {
-                        ?>
-                        <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/no-biologic-green.svg" style="width: 55px;" alt="logo qualiter no-organic">
-                        <?php
-                    }
-                    ?>
+                <div class="agriculteur_Name">
+                    <p><strong><?= $LastNameFaemer . ' ' . $nameFarmer ?></strong></p>
                 </div>
                 <div class="agriculteur_picture_departement">
                     <?php
@@ -54,30 +41,29 @@ foreach ($Farmers as $farmers) {
                             ?>
                             <img src="<?= routeUrl() ?>src/images/imageRegion/29_Finistère.JPG"
                                  alt="blason département français">
-                            <strong><?= $flag['departement_nom'] ?></strong>
+                            <p><strong><?= $flag['departement_nom'] ?></strong></p>
                             <?php
                         } else {
                             ?>
                             <img src="<?= routeUrl() ?>src/images/imageRegion/<?= $flag['departement_code'] ?>_<?= $flag['departement_nom'] ?>.png"
                                  alt="blason département français">
-                            <strong><?= $flag['departement_nom'] ?></strong>
+                            <p><strong><?= $flag['departement_nom'] ?></strong></p>
                             <?php
                         }
                     }
                     ?>
                 </div>
-                <hr>
             </a>
         </div>
         <?php
     }
 }
-if($nbpagination >= 5) {
+if($nbpagination >= 10) {
     $nb = $objFarmers->rowCountPageAgriculteur();
     for ($i = 0; $i <= $nb; $i++) {
         //tu recup la page sur l'aquelle t'es et si c'est = a i
         ?>
-        <a href="<?= routeUrl() ?>Farmers/<?= $i + 1 ?>"><?= $i + 1 ?></a>
+        <a class="pagination" href="<?= routeUrl() ?>Farmers/<?= $i + 1 ?>"><?= $i + 1 ?></a>
         <?php
     }
 }

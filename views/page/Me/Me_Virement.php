@@ -37,7 +37,7 @@ $virements = $objProfile->infoFarmer($idfarmer);
                     <h2>Ajouter mes informations bancaire :</h2>
                     <div class="Virement_info_form">
                         <form method="post">
-                            <div class="form-group">
+                            <div class="form-group ">
                                 <label>Mon Bic :</label>
                                 <input type="text" name="Bic"/>
                             </div>
@@ -45,7 +45,7 @@ $virements = $objProfile->infoFarmer($idfarmer);
                                 <label>Mon Iban :</label>
                                 <input type="text" name="IBAN"/>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group addBank">
                                 <input type="submit" name="addBancaire" value="Ajouter"/>
                             </div>
                         </form>
@@ -66,7 +66,7 @@ $virements = $objProfile->infoFarmer($idfarmer);
                                 <label>Mon Iban :</label>
                                 <input type="text" name="IBAN" value="<?= $virement['IBAN'] ?>"/>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group addBank">
                                 <input type="submit" name="ModifBancaire" value="Modifier"/>
                             </div>
                         </form>

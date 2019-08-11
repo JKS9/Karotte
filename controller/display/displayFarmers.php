@@ -17,9 +17,8 @@ if (strpos($_GET['p'], '/filters/') !== false) {
             if($verif > 0){
                 include "controller/one/OneFarmers.php";
             }else{
-                echo "<div class='agriculteu'>
+                echo "<div class='no-agriculteur'>
                     <p>Argriculteur introuvables, améliore ta recherche</p>
-                    <hr>
                 </div>";
             }
         }

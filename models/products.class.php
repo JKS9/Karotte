@@ -51,23 +51,23 @@ class products extends connect
         if(!$explode[1]) {
             $req = $this->_connect->query("SELECT * FROM `Produit` WHERE Actif ='1'");
             $nb = $req->rowCount();
-            if($nb < 6) {
+            if($nb < 10) {
                 $nbprod = 0;
             } else {
-                $nbprod = $nb / 5;
+                $nbprod = $nb / 10;
             }
         }
 
         return $nbprod;
     }
 
-    public function displayProducts($limit = 5)
+    public function displayProducts($limit = 10)
     {
         $explode = explode('/', $_GET['p']);
         if ($explode[1]) {
-            $offset = 5 * $explode[1];
+            $offset = 10 * $explode[1];
             if ($explode[1] != 0) {
-                $offset = $offset - 5;
+                $offset = $offset - 10;
             }
         } else {
             $offset = 0;
@@ -137,6 +137,9 @@ class products extends connect
         $add = $this -> _connect -> exec("INSERT INTO `FarmerProduits`(`IdUser`, `IdFarmer`, `IdListeProduit`, `Region`) VALUES ('$idUser','$idfarmer','$Products','$region')");
     }
 
+    public function AddProduitAdmin($name){
+        $req = $this -> _connect -> exec("INSERT INTO `ListeProduit`(`Name`, `Actif`) VALUES ('$name','0')");
+    }
 
 
 

@@ -27,8 +27,7 @@ if(isset($_SESSION['farmer'])){
                                     <p><?= $delivery['RoadNumber'].' '.$delivery['Road'].' '.$delivery['RoadName'].','?></p>
                                     <p><?= $delivery['City'].', '.$delivery['PostalCode'] ?></p>
                                     <p><?= $objProfile->infoRegion($delivery['Region']) ?> (<?= $delivery['Region'] ?>)</p>
-                                    <p><?= $delivery['County'] ?>)</p>
-                                    <span>Téléphone :</span>
+                                    <p><?= $delivery['County'] ?></p>
                                     <p><?= $delivery['Phone'] ?></p>
                                 </div>
                                 <div class="col-sm-3">
@@ -63,11 +62,12 @@ if(isset($_SESSION['farmer'])){
             <?php
         }else{
             ?>
-            <div class="col-md-12">
+            <div class="col-md-12 block_account_delivery_add">
+                <h4>Ajouter une adresse de livraison :</h4>
                 <div class="row">
                     <?= $errorAddadresse ?>
                     <form method="post">
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 region_delivery">
                             <label>Rue :</label>
                             <select name="Road">
                                 <option value="Rue">Rue</option>
@@ -92,7 +92,7 @@ if(isset($_SESSION['farmer'])){
                             <label>Ville :</label>
                             <input type="text" name="City" placeholder="City">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 region_delivery">
                             <label>Département :</label>
                             <select name="Region">
                                 <option>choisir un département</option>
@@ -105,7 +105,7 @@ if(isset($_SESSION['farmer'])){
                                 ?>
                             </select>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 region_delivery">
                             <label>Pays :</label>
                             <select name="Country">
                                 <option value="France">France</option>
@@ -115,7 +115,7 @@ if(isset($_SESSION['farmer'])){
                             <label>Téléphone :</label>
                             <input type="number" name="Phone" placeholder="Phone">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 editDeliveryend">
                             <input type="submit" name="Addadresse" value="Ajouter une adresse">
                         </div>
                     </form>
@@ -155,8 +155,6 @@ if(isset($_SESSION['farmer'])){
                                     <p><?= $delivery['City'].', '.$delivery['PostalCode'] ?></p>
                                     <p><?= $objProfile->infoRegion($delivery['Region']) ?> (<?= $delivery['Region'] ?>)</p>
                                     <p><?= $delivery['County'] ?></p>
-
-                                    <span>Téléphone :</span>
                                     <p><?= $delivery['Phone'] ?></p>
                                 </div>
                                 <div class="col-sm-3">
@@ -191,11 +189,12 @@ if(isset($_SESSION['farmer'])){
             <?php
         }else{
             ?>
-            <div class="col-md-12">
+            <div class="col-md-12 block_account_delivery_add">
+                <h4>Ajouter une adresse de livraison :</h4>
                 <div class="row">
                     <?= $errorAddadresse ?>
                     <form method="post">
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 region_delivery">
                             <label>Rue :</label>
                             <select name="Road">
                                 <option value="Rue">Rue</option>
@@ -220,7 +219,7 @@ if(isset($_SESSION['farmer'])){
                             <label>Ville :</label>
                             <input type="text" name="City" placeholder="City">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 region_delivery">
                             <label>Département :</label>
                             <select name="Region">
                                 <option>choisir un département</option>
@@ -233,7 +232,7 @@ if(isset($_SESSION['farmer'])){
                                 ?>
                             </select>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 region_delivery">
                             <label>Pays :</label>
                             <select name="Country">
                                 <option value="France">France</option>
@@ -243,7 +242,7 @@ if(isset($_SESSION['farmer'])){
                             <label>Téléphone :</label>
                             <input type="number" name="Phone" placeholder="Phone">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 editDeliveryend">
                             <input type="submit" name="Addadresse" value="Ajouter une adresse">
                         </div>
                     </form>

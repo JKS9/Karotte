@@ -31,42 +31,48 @@ require "controller/Delivery.php";
     <div class="row">
         <h1> Mes livraison faite et à faire</h1>
         <div class="col-lg-12 block_delivery_1">
-            <form method="post">
-                <div class="form-group">
-                    <label>Référence :</label>
-                    <input class="input_filter" type="text" name="Id" />
-                    <div class="form-group">
-                        <a href="" id="linksId">Rechercher</a>
+            <div class="row">
+                <form method="post">
+                    <div class="col-sm-6 form-group">
+                        <label>Référence :</label>
+                        <input class="input_filter" style="padding: 7px 15px;width: 250px;background: #f0f0f0;border-radius: 3px;border: none" type="text" name="Id" />
+                        <div class="form-group filtreDeliverydiv">
+                            <a href="" id="linksId">Rechercher</a>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label>status :</label>
-                    <select class="input_filter" name="Status">
-                        <option>choisir status</option>
-                        <option value="0">Livraison à faire</option>
-                        <option value="1">Livraison en cour</option>
-                        <option value="2">Livraison faite</option>
-                    </select>
-                    <div class="form-group">
-                        <a href="" id="linksStatus">Rechercher</a>
+                    <div class="col-sm-6 form-group">
+                        <label>status :</label>
+                        <select class="input_filter" style="width: 200px;border: none;background: #f3f3f3;padding: 3px;color: #000;"name="Status">
+                            <option>choisir status</option>
+                            <option value="0">Livraison à faire</option>
+                            <option value="1">Livraison en cour</option>
+                            <option value="2">Livraison faite</option>
+                        </select>
+                        <div class="form-group filtreDeliverydiv">
+                            <a href="" id="linksStatus">Rechercher</a>
+                        </div>
                     </div>
+                    <div class="col-sm-12">
+                        <p>Faite une recherche filtrer pour mieux vous y retrouvez soit par 'référence de commande ou Status de livraison'</p>
+                    </div>
+                </form>
+            </div>
+            <div class="row block_Ordder_history_info">
+                <div class="col-sm-12 block_Ordder_history_info_title">
+                    <h4>Information :</h4>
                 </div>
-                <p>Faite une recherche filtrer pour mieux vous y retrouvez soit par 'référence de commande ou Status de livraison'</p>
-            </form>
-            <div class="block_delivery_title">
-                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"> Information</span>
-            </div>
-            <div class="block_delivery_danger">
-                <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison à faire</span>
-            </div>
-            <div class="block_delivery_warning">
-                <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison en cours</span>
-            </div>
-            <div class="block_delivery_success">
-                <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>
-                <span>= livraison faite</span>
+                <div class="col-sm-4 block_Ordder_history_info_danger">
+                    <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                    <p>Attente confirmation</p>
+                </div>
+                <div class="col-sm-4 block_Ordder_history_info_warning">
+                    <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                    <p>Livraison en cours</p>
+                </div>
+                <div class="col-sm-4 block_Ordder_history_info_success">
+                    <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
+                    <p>Livraison faite</p>
+                </div>
             </div>
         </div>
         </div>

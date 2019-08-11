@@ -12,7 +12,7 @@
             $color = '<div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>';
 
             ?>
-            <div class="block_delivery_to_do_order" style="border: 1px solid #000;">
+            <div class="block_Ordder_history_order">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
@@ -67,10 +67,10 @@
                                 $total = $produit['Produit_prix']  * $produit['nb_produit'];
                                 $calttc = $calttc + $total;
                                 if($produit['Qualiter'] == 1){
-                                    $qualiter = "0.15";
+                                    $qualiter = 0.15;
                                     $comPoucentage = '15%';
                                 }else{
-                                    $qualiter = "0.20";
+                                    $qualiter = 0.20;
                                     $comPoucentage = "20%";
                                 }
                                 ?>
@@ -118,26 +118,15 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-lg-12">
-                        <?php
-                        $dlfacture = explode('/', $_GET['p']);
-                        ?>
-                        option et téléchargement :
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Facture</p>
-                                <a href="<?= routeUrl() ?>src/images/pdfFacture/<?= $orderId ?>_facture.pdf" target="_blank" download>
-                                    <button>Download</button>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Envoyer la commande</p>
-                                <form method="post">
-                                    <input type="hidden" name="id" value="<?= $orderId ?>">
-                                    <input type="submit" name="envoyer" value="Envoyer">
-                                </form>
-                            </div>
-                        </div>
+                </div>
+                <p>option et téléchargement :<p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Envoyer la commande</p>
+                        <form method="post">
+                            <input type="hidden" name="id" value="<?= $orderId ?>">
+                            <input class="EnvoyerColis" type="submit" name="envoyer" value="Envoyer">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -145,7 +134,7 @@
         }
     }else{
         ?>
-        <div class="block_delivery_to_do_order">
+        <div class="block_delivery_no">
             <p style="text-align: center">Vous n'avez pas de livraison à faire</p>
         </div>
         <?php
@@ -172,7 +161,7 @@
                 $color = '<div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px"></div>';
             }
             ?>
-            <div class="block_delivery_to_do_order" style="border: 1px solid #000;">
+            <div class="block_Ordder_history_order">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
@@ -278,27 +267,13 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-lg-12">
-                        <?php
-                        $dlfacture = explode('/', $_GET['p']);
-                        ?>
-                        option et téléchargement :
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Facture</p>
-                                <a href="<?= routeUrl() ?>src/images/pdfFacture/<?= $orderId ?>_facture.pdf" target="_blank" download>
-                                    <button>Download</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <?php
         }
     }else{
         ?>
-        <div class="block_delivery_to_do_order">
+        <div class="block_delivery_no">
             <p style="text-align: center">Vous n'avez pas de commande</p>
         </div>
         <?php

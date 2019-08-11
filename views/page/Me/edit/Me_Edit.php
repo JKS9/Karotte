@@ -4,8 +4,10 @@ if(isset($_SESSION['farmer'])){
     $selectRegion = $objRegister->displayRegion();
     ?>
     <div class="row block_account_me_edit">
-        <p>Modifier mes informations :</p>
+        <h4>Modifier mes informations :</h4>
         <?= $errorInfoPerso ?>
+        <?= $errorProfilPicture ?>
+        <?= $errorInfoPersoFarmer ?>
         <?php
         foreach($objProfile->infoUser($_SESSION['farmer']) as $edit){
             ?>
@@ -26,40 +28,40 @@ if(isset($_SESSION['farmer'])){
                     <label>Date de naissance :</label>
                     <input type="date" name="DateBirth" value="<?= $edit['DateBirth']?>">
                 </div>
-                <div class="col-md-12">
-                    <input type="submit" name="infoPerso" value="edit">
+                <div class="col-md-12 editAccount">
+                    <input type="submit" class="ButtonPay" name="infoPerso" value="edit">
                 </div>
             </form>
             <?php
         }
         ?>
-        <?= $errorProfilPicture ?>
         <form method="post" enctype="multipart/form-data">
             <div class="col-md-12">
                 <?php
                 $filename = "././src/images/Agriculteurs/".$idfarmer.".jpg";
                 if(file_exists($filename)) {
                     ?>
-                    <img src="<?= routeUrl() ?>src/images/Agriculteurs/<?= $idfarmer ?>.jpg">
+                    <img style="width: 100px" src="<?= routeUrl() ?>src/images/Agriculteurs/<?= $idfarmer ?>.jpg">
                     <?php
                 }else{
                     ?>
-                    <img src="<?= routeUrl() ?>src/images/icone/iconeUsers/default.jpg" alt='icone defaut'/>
+                    <img style="width: 100px" src="<?= routeUrl() ?>src/images/icone/iconeUsers/default.jpg" alt='icone defaut'/>
                     <?php
                 }
                 ?>
-                <label>photo de profil :</label>
+                <h4>photo de profil :</h4>
                 <input type="file" name="file_picture">
-                <input type="submit" name="picture" value="ajouter"/>
+                <div class="editAccount">
+                    <input type="submit" name="picture" value="ajouter"/>
+                </div>
             </div>
         </form>
-        <?= $errorInfoPersoFarmer ?>
         <form method="post">
             <div class="row">
                 <?php
                 foreach($objProfile->infoFarmer($idfarmer) as $editFarmer) {
                     ?>
-                    <div class="col-md-12">
+                    <div class="col-md-12 textArea_account">
                         <label>Biography :</label>
                         <textarea name="Biography"><?= $editFarmer['Biography']?></textarea>
                     </div>
@@ -87,7 +89,7 @@ if(isset($_SESSION['farmer'])){
                         <label>Département :</label>
                         <label><?= $objProfile->infoRegion($editFarmer['Region']) ?> (<?= $editFarmer['Region'] ?>) </label>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 region_account">
                         <label>Nouveau département :</label>
                         <select name="Region">
                             <option>choisir un département</option>
@@ -104,7 +106,7 @@ if(isset($_SESSION['farmer'])){
                         <label>Phone :</label>
                         <input type="number" name="Phone" value="<?= $editFarmer['Phone']?>">
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 editAccountend">
                         <input type="submit" name="infoPersofarmer" value="sauvgarder">
                     </div>
                     <?php
@@ -117,7 +119,7 @@ if(isset($_SESSION['farmer'])){
 }else{
     ?>
     <div class="row block_account_me_edit">
-        <p>Modifier mes informations :</p>
+        <h4>Modifier mes informations :</h4>
         <?= $errorInfoPerso ?>
         <?php
         foreach($objProfile->infoUser($_SESSION['user']) as $edit) {
@@ -139,7 +141,7 @@ if(isset($_SESSION['farmer'])){
                     <label>Date de naissance :</label>
                     <input type="date" name="DateBirth" value="<?= $edit['DateBirth'] ?>">
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 editAccountend">
                     <input type="submit" name="infoPerso" value="sauvgarder">
                 </div>
             </form>

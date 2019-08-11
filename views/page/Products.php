@@ -23,7 +23,7 @@ include "controller/products.php";
 <section>
     <div class="container products_block">
         <div class="row">
-            <div class="col-lg-2 products_block_1">
+            <div class="col-sm-3 products_block_1">
                 <div class="products_block_1_form">
                     <form method="post">
                         <div id="minimis_products" class="products_block_1_form_1">
@@ -134,16 +134,19 @@ include "controller/products.php";
                             </div>
                         </div>
                         <hr>
-                        <div class="products_block_1_form_submit">
-                            <a href="http://localhost/Karotte/Products/" id="links">http://Karotte/Products/</a>
+                        <div class="filters_block_1_form_submit">
+                            <a href="http://localhost/Karotte/Products/" id="links">recherher</a>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="col-lg-10 products_block_2">
+            <div class="col-sm-9 products_block_2">
+                <h2>Annonces :</h2>
+                <div class="row">
                 <?php
-                include "controller/display/displayProducts.php";
+                    include "controller/display/displayProducts.php";
                 ?>
+                </div>
             </div>
         </div>
     </div>

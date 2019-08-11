@@ -5,7 +5,7 @@ if (isset($_SESSION['farmer'])) {
     $nb = sizeof($annonces);
     if ($nb != 0) {
         ?>
-        <div class="container-fluid no-padding block_Ad_Historie">
+        <div class="container-fluid block_Ad_Historie">
             <div class="row">
                 <div class="col-lg-4 block_Ad_Historie_1">
                     <?php

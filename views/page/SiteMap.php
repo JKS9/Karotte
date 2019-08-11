@@ -3,7 +3,8 @@ if(isset($_SESSION['user'])){
     ?>
     <div class="container SiteMap_block">
         <div class="row SiteMap_block_1">
-            <div class="col-md">
+            <div class="col-sm-6">
+                <p>Navigation</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Home">Home</a></li>
                     <li><a href="<?= routeUrl() ?>Farmers/1">Farmers</a></li>
@@ -11,7 +12,7 @@ if(isset($_SESSION['user'])){
                     <li><a href="<?= routeUrl() ?>Cart">Cart</a></li>
                 </ul>
             </div>
-            <div class="col-md">
+            <div class="col-sm-6">
                 <p>Profile</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Account">My account</a></li>
@@ -19,14 +20,10 @@ if(isset($_SESSION['user'])){
                     <li><a href="<?= routeUrl() ?>controller/logout.php">disconnect</a></li>
                 </ul>
             </div>
-            <div class="col-md">
-                <ul>
-                    <li>
-                        <a href="<?= routeUrl() ?>Home">
-                            <img src="<?= routeUrl() ?>src/images/logo/png/KAROTTE120px.png">
-                        </a>
-                    </li>
-                </ul>
+            <div class="col-sm-12">
+                <div style="width: 300px; margin:0 auto" class="SiteMap_block_img">
+                    <img style="width: 100%" src="<?= routeUrl() ?>src/images/photoSite/undraw_mind_map_cwng.svg">
+                </div>
             </div>
         </div>
     </div>
@@ -35,7 +32,7 @@ if(isset($_SESSION['user'])){
     ?>
     <div class="container SiteMap_block">
         <div class="row SiteMap_block_1">
-            <div class="col-md">
+            <div class="col-sm-6">
                 <p>Navigation</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Home">Home</a></li>
@@ -45,7 +42,7 @@ if(isset($_SESSION['user'])){
                     <li><a href="<?= routeUrl() ?>Cart">Cart</a></li>
                 </ul>
             </div>
-            <div class="col-md">
+            <div class="col-sm-6">
                 <p>Profile</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Account">My account</a></li>
@@ -54,14 +51,10 @@ if(isset($_SESSION['user'])){
                     <li><a href="<?= routeUrl() ?>controller/logout.php">disconnect</a></li>
                 </ul>
             </div>
-            <div class="col-md">
-                <ul>
-                    <li>
-                        <a href="<?= routeUrl() ?>Home">
-                            <img src="<?= routeUrl() ?>src/images/logo/png/KAROTTE120px.png">
-                        </a>
-                    </li>
-                </ul>
+            <div class="col-sm-12">
+                <div style="width: 300px; margin:0 auto" class="SiteMap_block_img">
+                    <img style="width: 100%" src="<?= routeUrl() ?>src/images/photoSite/undraw_mind_map_cwng.svg">
+                </div>
             </div>
         </div>
     </div>
@@ -70,10 +63,7 @@ if(isset($_SESSION['user'])){
     ?>
     <div class="container SiteMap_block">
         <div class="row SiteMap_block_1">
-            <div class="col-md">
-
-            </div>
-            <div class="col-md">
+            <div class="col-sm-6">
                 <p>Navigation</p>
                 <ul>
                     <li><a href="<?= routeUrl() ?>Home">Home</a></li>
@@ -84,14 +74,10 @@ if(isset($_SESSION['user'])){
                     <li><a href="<?= routeUrl() ?>SiteMap">SiteMap</a></li>
                 </ul>
             </div>
-            <div class="col-md">
-                <ul>
-                    <li>
-                        <a href="<?= routeUrl() ?>Home">
-                            <img src="<?= routeUrl() ?>src/images/logo/png/KAROTTE120px.png">
-                        </a>
-                    </li>
-                </ul>
+            <div class="col-sm-6">
+                <div style="width: 300px; margin:0 auto" class="SiteMap_block_img">
+                    <img style="width: 100%" src="<?= routeUrl() ?>src/images/photoSite/undraw_mind_map_cwng.svg">
+                </div>
             </div>
         </div>
     </div>

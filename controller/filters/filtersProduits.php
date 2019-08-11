@@ -45,38 +45,34 @@ $nbpagination = sizeof($produitsFiltre);
 
 foreach($produitsFiltre as $filtres){
 ?>
-    <div class="produit">
+    <div class=" col-sm-3 produit">
         <a href="<?= routeUrl() ?>Products/produit=<?= $filtres['Id'] ?>">
-            <img src="<?= routeUrl() ?>src/images/produits/<?= $objProducts->listeProduit($filtres['IdListeProduit']) ?>.jpg" style="width: 100px;" alt="produit image">
-            <p><?= $objProducts->listeProduit($filtres['IdListeProduit'])?></p>
-            <p><?= $filtres['Prix']?> €</p>
-            <p><?= $filtres['UnitWeight']?></p>
-                <?php
-            if($filtres['Qualiter'] == '1' ){
-                ?>
-            <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/biologic.svg" style="width: 55px;" alt="logo qualiter organic">
-                <?php
-            }else{
-                ?>
-            <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/no-biologic-green.svg" style="width: 55px;" alt="logo qualiter no-organic">
-                <?php
-            }
-            foreach ($objProducts->flagRegion($filtres['Region']) as $flag){
-                if($flag['departement_code'] == '29'){
-                    ?>
-                    <img src="<?= routeUrl() ?>src/images/imageRegion/29_Finistère.JPG" alt="blason département français">
-                    <strong><?= $flag['departement_nom']?></strong>
-                    <?php
-                }else{
-                    ?>
-                    <img src="<?= routeUrl() ?>src/images/imageRegion/<?= $flag['departement_code'] ?>_<?= $flag['departement_nom']?>.png" alt="blason département français">
-                    <strong><?= $flag['departement_nom']?></strong>
-                    <?php
-                }
-
-            }
-            ?>
-            <hr>
+            <div class="produit_picture">
+                <img src="<?= routeUrl() ?>src/images/produits/<?= $objProducts->listeProduit($filtres['IdListeProduit']) ?>.jpg" style="width: 100px;" alt="produit image">
+            </div>
+            <div class="produit_info">
+                <p><?= $objProducts->listeProduit($filtres['IdListeProduit'])?></p>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <p><?= $filtres['Prix']?> €</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <?php
+                        if($filtres['Qualiter'] == '1' ){
+                            ?>
+                            <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/biologic.svg" style="width: 25px;" alt="logo qualiter organic">
+                            <?php
+                        }else{
+                            ?>
+                            <img src="<?= routeUrl() ?>src/images/icone/petiteIcone/no-biologic-green.svg" style="width: 25px;" alt="logo qualiter no-organic">
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
         </a>
     </div>
         <?php

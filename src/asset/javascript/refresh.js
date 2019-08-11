@@ -21,7 +21,7 @@ function message() {
         }
 
     });
-    setTimeout(message, 6000); //refresh toutes secondes (1 minute = 60000)
+    setTimeout(message, 1500000000); //refresh toutes secondes (1 minute = 60000)
 }
 
 
