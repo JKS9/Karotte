@@ -89,7 +89,6 @@ foreach ($farmersFiltre as $farmers) {
 if($nbpagination >= 10){
     $nb = ceil($nbpagination / 10);
     for ($i = 0; $i <= $nb; $i++) {
-        //tu recup la page sur l'aquelle t'es et si c'est = a i
         ?>
         <a class="pagination" href="<?= routeUrl() ?><?= $filters[0] ?>/<?= $filters[1] ?>/<?= $filters[2] ?>/<?= $filters[3] ?>/<?= $i + 1 ?>"><?= $i + 1 ?></a>
         <?php

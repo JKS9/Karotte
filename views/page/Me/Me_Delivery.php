@@ -9,9 +9,9 @@ if(isset($_SESSION['farmer'])){
             <?php
             if($nbDelivery == 0){
                 ?>
-                <p>Vous n'avez pas ajouter d'adresse à votre carnet.</p>
-                <p>Seulement 3 adresse autoriser</p>
-                <p>Remplir le formulaire si-dessous pour ajouter une adresse</p>
+                <p>You have not added an adress to your netBook</p>
+                <p>Only three authorized adresses</p>
+                <p>Fill out the form below to add an adress</p>
                 <?php
             }else{
                 ?>
@@ -21,7 +21,7 @@ if(isset($_SESSION['farmer'])){
                     foreach($deliverys as $delivery){
                         ?>
                         <li class="list-group-item">
-                            <h3>Adresse de livraison n°<?= $nb ?></h3>
+                            <h3>Delivery adress n°<?= $nb ?></h3>
                             <div class="row">
                                 <div class="col-sm-9">
                                     <p><?= $delivery['RoadNumber'].' '.$delivery['Road'].' '.$delivery['RoadName'].','?></p>
@@ -34,7 +34,7 @@ if(isset($_SESSION['farmer'])){
                                     <div class="form_delivery">
                                         <form method="post">
                                             <input type="hidden" name="adresse" value="<?= $delivery['Id'] ?>">
-                                            <input type="submit" name="deleteDelivery" value="Supprimer">
+                                            <input type="submit" name="deleteDelivery" value="Delete">
                                         </form>
                                     </div>
                                     <div class="edit_delivery">
@@ -56,19 +56,18 @@ if(isset($_SESSION['farmer'])){
         if($nbDelivery >= 3){
             ?>
             <div class="col-md-12">
-                <p>Vous ne pouvez pas ajouter de nouvelles adresse à votre carnet.</p>
-                <p>seulement 3 adresse autoriser</p>
+                <p>Only three authorized adresses</p>
             </div>
             <?php
         }else{
             ?>
             <div class="col-md-12 block_account_delivery_add">
-                <h4>Ajouter une adresse de livraison :</h4>
+                <h4>Add delivery adress :</h4>
                 <div class="row">
                     <?= $errorAddadresse ?>
                     <form method="post">
                         <div class="col-sm-12 region_delivery">
-                            <label>Rue :</label>
+                            <label>Street :</label>
                             <select name="Road">
                                 <option value="Rue">Rue</option>
                                 <option value="Avenue">Avenue</option>
@@ -77,25 +76,25 @@ if(isset($_SESSION['farmer'])){
                             </select>
                         </div>
                         <div class="col-sm-12">
-                            <label>Nom de rue :</label>
+                            <label>Name of the street :</label>
                             <input type="text" name="NameStreet" placeholder="Name Street">
                         </div>
                         <div class="col-sm-12">
-                            <label>Numéro de la rue :</label>
+                            <label>Street number :</label>
                             <input type="number" name="NumberStreet" placeholder="Number Street">
                         </div>
                         <div class="col-sm-12">
-                            <label>Code postal :</label>
+                            <label>Postal code :</label>
                             <input type="number" name="PostalCode" placeholder="Postal Code">
                         </div>
                         <div class="col-sm-12">
-                            <label>Ville :</label>
+                            <label>City :</label>
                             <input type="text" name="City" placeholder="City">
                         </div>
                         <div class="col-sm-12 region_delivery">
-                            <label>Département :</label>
+                            <label>Department :</label>
                             <select name="Region">
-                                <option>choisir un département</option>
+                                <option>Choise department</option>
                                 <?php
                                 foreach($selectRegion as $key => $value){
                                     ?>
@@ -106,17 +105,17 @@ if(isset($_SESSION['farmer'])){
                             </select>
                         </div>
                         <div class="col-sm-12 region_delivery">
-                            <label>Pays :</label>
+                            <label>Country :</label>
                             <select name="Country">
                                 <option value="France">France</option>
                             </select>
                         </div>
                         <div class="col-sm-12">
-                            <label>Téléphone :</label>
+                            <label>Phone :</label>
                             <input type="number" name="Phone" placeholder="Phone">
                         </div>
                         <div class="col-sm-12 editDeliveryend">
-                            <input type="submit" name="Addadresse" value="Ajouter une adresse">
+                            <input type="submit" name="Addadresse" value="Add Delivery">
                         </div>
                     </form>
                 </div>
@@ -136,9 +135,9 @@ if(isset($_SESSION['farmer'])){
             <?php
             if($nbDelivery == 0){
                 ?>
-                <p>Vous n'avez pas ajouter d'adresse à votre carnet.</p>
-                <p>Seulement 3 adresse autoriser</p>
-                <p>Remplir le formulaire si-dessous pour ajouter une adresse</p>
+                <p>You have not added an adress to your netBook</p>
+                <p>Only three authorized adresses</p>
+                <p>Fill out the form below to add an adress</p>
                 <?php
             }else{
                 ?>
@@ -148,7 +147,7 @@ if(isset($_SESSION['farmer'])){
                     foreach($deliverys as $delivery){
                         ?>
                         <li class="list-group-item">
-                            <h3>Adresse de livraison n°<?= $nb ?></h3>
+                            <h3>Delivery adress n°<?= $nb ?></h3>
                             <div class="row">
                                 <div class="col-sm-9">
                                     <p><?= $delivery['RoadNumber'].' '.$delivery['Road'].' '.$delivery['RoadName'].','?></p>
@@ -161,7 +160,7 @@ if(isset($_SESSION['farmer'])){
                                     <div class="form_delivery">
                                         <form method="post">
                                             <input type="hidden" name="adresse" value="<?= $delivery['Id'] ?>">
-                                            <input type="submit" name="deleteDelivery" value="Supprimer">
+                                            <input type="submit" name="deleteDelivery" value="Delete">
                                         </form>
                                     </div>
                                     <div class="edit_delivery">
@@ -183,19 +182,18 @@ if(isset($_SESSION['farmer'])){
         if($nbDelivery >= 3){
             ?>
             <div class="col-md-12">
-                <p>Vous ne pouvez pas ajouter de nouvelles adresse à votre carnet.</p>
-                <p>seulement 3 adresse autoriser</p>
+                <p>Only three authorized adresses</p>
             </div>
             <?php
         }else{
             ?>
             <div class="col-md-12 block_account_delivery_add">
-                <h4>Ajouter une adresse de livraison :</h4>
+                <h4>Add Delivery adress :</h4>
                 <div class="row">
                     <?= $errorAddadresse ?>
                     <form method="post">
                         <div class="col-sm-12 region_delivery">
-                            <label>Rue :</label>
+                            <label>Street :</label>
                             <select name="Road">
                                 <option value="Rue">Rue</option>
                                 <option value="Avenue">Avenue</option>
@@ -204,25 +202,25 @@ if(isset($_SESSION['farmer'])){
                             </select>
                         </div>
                         <div class="col-sm-12">
-                            <label>Nom de rue :</label>
+                            <label>Name of the street :</label>
                             <input type="text" name="NameStreet" placeholder="Name Street">
                         </div>
                         <div class="col-sm-12">
-                            <label>Numéro de la rue :</label>
+                            <label>Number street :</label>
                             <input type="number" name="NumberStreet" placeholder="Number Street">
                         </div>
                         <div class="col-sm-12">
-                            <label>Code postal :</label>
+                            <label>Postal code :</label>
                             <input type="number" name="PostalCode" placeholder="Postal Code">
                         </div>
                         <div class="col-sm-12">
-                            <label>Ville :</label>
+                            <label>City :</label>
                             <input type="text" name="City" placeholder="City">
                         </div>
                         <div class="col-sm-12 region_delivery">
-                            <label>Département :</label>
+                            <label>Department :</label>
                             <select name="Region">
-                                <option>choisir un département</option>
+                                <option>Choise department</option>
                                 <?php
                                 foreach($selectRegion as $key => $value){
                                     ?>
@@ -233,17 +231,17 @@ if(isset($_SESSION['farmer'])){
                             </select>
                         </div>
                         <div class="col-sm-12 region_delivery">
-                            <label>Pays :</label>
+                            <label>Country :</label>
                             <select name="Country">
                                 <option value="France">France</option>
                             </select>
                         </div>
                         <div class="col-sm-12">
-                            <label>Téléphone :</label>
+                            <label>Phone :</label>
                             <input type="number" name="Phone" placeholder="Phone">
                         </div>
                         <div class="col-sm-12 editDeliveryend">
-                            <input type="submit" name="Addadresse" value="Ajouter une adresse">
+                            <input type="submit" name="Addadresse" value="Add Delivery">
                         </div>
                     </form>
                 </div>

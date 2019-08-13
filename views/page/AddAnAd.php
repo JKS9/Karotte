@@ -5,7 +5,7 @@ include "controller/addAnAd.php";
     <div class="row addAnAd_Block_form">
         <div class="col-md-6 addAnAd_Block_form_1">
             <?= $error ?>
-            <h4>Ajouter une annonce :</h4>
+            <h4>Add an Ad :</h4>
             <div class="addAnAd_Block_form_1_block">
                 <form method="post">
                     <div class="addAnAd_Block_form_1_input">
@@ -16,7 +16,7 @@ include "controller/addAnAd.php";
                     <div class="addAnAd_Block_form_1_input">
                         <p>Chose products</p>
                         <select name="Products">
-                            <option>Mon Produit</option>
+                            <option>My Product</option>
                             <?php
                             foreach ($inputProductsFilters as $key => $value){
                                 ?>
@@ -60,10 +60,10 @@ include "controller/addAnAd.php";
             <div class="addAnAd_Block_form_2_block">
                 <form method="post" enctype="multipart/form-data">
                     <div class="addAnAd_Block_form_2_title">
-                        <p>Vous ne trouvez pas votre produits de vente ?</p>
-                        <p>Faites un demande au près de nos administateurs pour ajouter un produits.</p>
-                        <p>Ajouter le nom + une image</p>
-                        <p>On vous répondra au plus vite !</p>
+                        <p>You can not find your product for sale ?</p>
+                        <p>Make a request to our administrators to add a product</p>
+                        <p>Add the name plus an image</p>
+                        <p>We'll answer you soon</p>
                     </div>
                     <div class="addAnAd_Block_form_2_input">
                         <p>Name :</p>
@@ -72,11 +72,11 @@ include "controller/addAnAd.php";
                     <div class="addAnAd_Block_form_2_input_file">
                         <p>Choose file</p>
                         <input type="file" name="FileNewProducts"/>
-                        <span>Seul les fichier en .png sont accepter</span>
+                        <span>Only .png files are accepted</span>
                     </div>
                     <?= $errorFile ?>
                     <div class="addAnAd_Block_form_2_submit">
-                        <input type="submit" name="NewProducts" value="Proposer"/>
+                        <input type="submit" name="NewProducts" value="Send"/>
                     </div>
                 </form>
             </div>

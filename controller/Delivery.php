@@ -11,7 +11,7 @@ if(isset($_POST['envoyer'])){
     $objDelivery->DeliveryCommande($id);
 
     $DeliverySend = "<div class='alert alert-success' role='alert'>
-            LA commande à été marquer 'Envoyer', en attente de la validation 'reception du client'.
+            The order was sent pending customer validation.
         </div>";
 }
 ?>

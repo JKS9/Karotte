@@ -8,16 +8,16 @@ $virements = $objProfile->infoFarmer($idfarmer);
             if($virement['Bic'] == null || $virement['IBAN'] == null ){
                 ?>
                 <div class="Virement">
-                    <h2>Mes information bancaire :</h2>
+                    <h2>My banking information :</h2>
                     <div class="Virement_info">
-                        <p>Vous n'avez enregistrer vos informations de virement bancaire "BIC" et "IBAN".</p>
+                        <p>You do not have your bic and iban banking information.</p>
                     </div>
                 </div>
                 <?php
             }else{
                 ?>
                 <div class="Virement">
-                    <h2>Mes information bancaire :</h2>
+                    <h2>My banking information :</h2>
                     <div class="Virement_info">
                         <p>BIC : <?= $virement['Bic'] ?></p>
                         <p>IBAN : <?= $virement['IBAN'] ?></p>
@@ -34,7 +34,7 @@ $virements = $objProfile->infoFarmer($idfarmer);
             if($virement['Bic'] == null || $virement['IBAN'] == null ){
                 ?>
                 <div class="Virement_form">
-                    <h2>Ajouter mes informations bancaire :</h2>
+                    <h2>Add my banking information :</h2>
                     <div class="Virement_info_form">
                         <form method="post">
                             <div class="form-group ">
@@ -46,7 +46,7 @@ $virements = $objProfile->infoFarmer($idfarmer);
                                 <input type="text" name="IBAN"/>
                             </div>
                             <div class="form-group addBank">
-                                <input type="submit" name="addBancaire" value="Ajouter"/>
+                                <input type="submit" name="addBancaire" value="Add"/>
                             </div>
                         </form>
                     </div>
@@ -55,19 +55,19 @@ $virements = $objProfile->infoFarmer($idfarmer);
             }else{
                 ?>
                 <div class="Virement_form">
-                    <h2>Modifier mes informations bancaire :</h2>
+                    <h2>Change my banking information :</h2>
                     <div class="Virement_info_form">
                         <form method="post">
                             <div class="form-group">
-                                <label>Mon Bic :</label>
+                                <label>My Bic :</label>
                                 <input type="text" name="Bic" value="<?= $virement['Bic'] ?>"/>
                             </div>
                             <div class="form-group">
-                                <label>Mon Iban :</label>
+                                <label>My Iban :</label>
                                 <input type="text" name="IBAN" value="<?= $virement['IBAN'] ?>"/>
                             </div>
                             <div class="form-group addBank">
-                                <input type="submit" name="ModifBancaire" value="Modifier"/>
+                                <input type="submit" name="ModifBancaire" value="Edit"/>
                             </div>
                         </form>
                     </div>

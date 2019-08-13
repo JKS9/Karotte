@@ -1,5 +1,5 @@
 <div class="title">
-    <p><strong>Formulaire d'inscription Utilisateur :</strong></p>
+    <p><strong>User registration form :</strong></p>
 </div>
 <div class="row">
     <div class="col-sm-5">
@@ -15,7 +15,7 @@
                     <?php echo $errorSignUpUsersName ?>
                 </div>
                 <div class="input_register_user">
-                    <label><strong>First-name :</strong>*</label>
+                    <label><strong>Surname :</strong>*</label>
                     <input type="text" name="First-Name" placeholder="First-Name">
                     <?php echo $errorSignUpUsersFirstName ?>
                 </div>

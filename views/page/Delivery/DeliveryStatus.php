@@ -1,5 +1,5 @@
 <div class="block_delivery_to_do">
-    <h2>recherche d'une commande par status :</h2>
+    <h2>Search for an order for status :</h2>
     <?php
     $statusurl = explode('/',$_GET['p']);
 
@@ -18,11 +18,11 @@
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-3">
-                                <p><strong>Référence n° : </strong></p>
+                                <p><strong>Reference n° : </strong></p>
                                 <p><?= $orderId ?></p>
                             </div>
                             <div class="col-lg-3">
-                                <p><strong>Commander le :</strong></p>
+                                <p><strong>Order date :</strong></p>
                                 <p><?= $order['date_Commande'] ?></p>
                             </div>
                             <div class="col-lg-3">
@@ -36,12 +36,13 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="block_delivery_to_do_order_acheteur">
-                            <p><strong>Acheteur : </strong></p>
+                            <p><strong>Buyer : </strong></p>
                             <p><?= $order['user_lastName'] ?> <?= $order['name_user'] ?></p>
                             <p><?= $order['phone'] ?></p>
                         </div>
                         <div class="block_delivery_to_do_order_delivery">
-                            <p><strong>Adresse de livraison :</strong></p>
+                            <p><strong> :</strong></p>
+                            <p><strong>Delivery adress :</strong></p>
                             <p><?= $order['road_number'].' '.$order['road'].' '.$order['road_name'].','?></p>
                             <p><?= $order['city'].', '.$order['postal_code'] ?></p>
                             <p><?= $order['region'].', '.$order['country'] ?></p>
@@ -51,12 +52,12 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th style="text-align: center" scope="col">Référence</th>
-                                <th style="text-align: center" scope="col">Nom</th>
-                                <th style="text-align: center" scope="col">Poids</th>
-                                <th style="text-align: center" scope="col">Prix pièce</th>
-                                <th style="text-align: center" scope="col">nombre</th>
-                                <th style="text-align: center" scope="col">Prix total</th>
+                                <th style="text-align: center" scope="col">Reference</th>
+                                <th style="text-align: center" scope="col">Name</th>
+                                <th style="text-align: center" scope="col">Weigth</th>
+                                <th style="text-align: center" scope="col">Unit price</th>
+                                <th style="text-align: center" scope="col">Number</th>
+                                <th style="text-align: center" scope="col">Total Price</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -102,7 +103,7 @@
                                 <th style="text-align: center" scope="col"></th>
                                 <th style="text-align: center" scope="col"></th>
                                 <th style="text-align: center" scope="col"></th>
-                                <th style="text-align: center" scope="col">Livraison</th>
+                                <th style="text-align: center" scope="col">Delivery</th>
                                 <th style="text-align: center" scope="col">3 €</th>
                             </tr>
                             <?php
@@ -119,20 +120,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-lg-12">
-                        <?php
-                        $dlfacture = explode('/', $_GET['p']);
-                        ?>
-                        option et téléchargement :
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Facture</p>
-                                <a href="<?= routeUrl() ?>src/images/pdfFacture/<?= $orderId ?>_facture.pdf" target="_blank" download>
-                                    <button>Download</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <?php
@@ -140,7 +127,7 @@
     }else{
         ?>
         <div class="block_delivery_to_do_order">
-            <p style="text-align: center">Aucune commande correspond au status chercher</p>
+            <p style="text-align: center">No order matches the serach status</p>
         </div>
         <?php
     }

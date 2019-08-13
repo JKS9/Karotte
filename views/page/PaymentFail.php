@@ -1,1 +1,1 @@
-<p>Le paiement à échouer</p>
+<p>The payment failed</p>

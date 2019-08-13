@@ -47,7 +47,7 @@ include "controller/products.php";
                         </div>
                         <hr>
                         <div id="minimis_region" class="products_block_1_form_1">
-                            <p>Département</p>
+                            <p>Department</p>
                         </div>
                         <div id="region_display" class="products_block_1_form_2">
                             <?php
@@ -67,7 +67,7 @@ include "controller/products.php";
                         </div>
                         <hr>
                         <div id="minimis_poids" class="products_block_1_form_1">
-                            <p>poids</p>
+                            <p>Weight</p>
                         </div>
                         <div id="poids_display" class="products_block_1_form_2">
                             <div class='products_block_1_form_line'>
@@ -113,12 +113,12 @@ include "controller/products.php";
                         </div>
                         <hr>
                         <div id="minimis_prix" class="products_block_1_form_1">
-                            <p>prix</p>
+                            <p>Price</p>
                         </div>
                         <div id="prix_display" class="products_block_1_form_2">
                             <div class='products_block_1_form_line'>
                                 <div class='products_block_1_form_input_title'>
-                                    <span>croissant</span>
+                                    <span>Increasing</span>
                                 </div>
                                 <div class='products_block_1_form_input'>
                                     <input type='radio' id="check" name='price' value='1'/>
@@ -126,7 +126,7 @@ include "controller/products.php";
                             </div>
                             <div class='products_block_1_form_line'>
                                 <div class='products_block_1_form_input_title'>
-                                    <span>Décroissant</span>
+                                    <span>Decreasing</span>
                                 </div>
                                 <div class='products_block_1_form_input'>
                                     <input type='radio' id="check" name='price' value='2'/>
@@ -135,13 +135,13 @@ include "controller/products.php";
                         </div>
                         <hr>
                         <div class="filters_block_1_form_submit">
-                            <a href="http://localhost/Karotte/Products/" id="links">recherher</a>
+                            <a href="http://localhost/Karotte/Products/" id="links">Search</a>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="col-sm-9 products_block_2">
-                <h2>Annonces :</h2>
+                <h2>Notice :</h2>
                 <div class="row">
                 <?php
                     include "controller/display/displayProducts.php";

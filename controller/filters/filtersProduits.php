@@ -82,7 +82,6 @@ $exlpodeUrl = explode('/', $_GET['p']);
 if($nbpagination >= 10){
     $nb = ceil($nbpagination / 10);
     for ($i = 0; $i <= $nb; $i++) {
-        //tu recup la page sur l'aquelle t'es et si c'est = a i
         ?>
             <a href="<?= routeUrl() ?><?= $exlpodeUrl[0] ?>/<?= $exlpodeUrl[1] ?>/<?= $exlpodeUrl[2] ?>/<?= $exlpodeUrl[3] ?>/<?= $exlpodeUrl[4] ?>/<?= $exlpodeUrl[5] ?>/<?= $i + 1 ?>"><?= $i + 1 ?></a>
             <?php

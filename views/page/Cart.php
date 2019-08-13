@@ -3,7 +3,7 @@ require "controller/carts.php";
 
 if ($isPayment) {
     ?>
-    <p>Vous allez être redirigé vers le site de paiement</p>
+    <p>You will be redirected to the payment site</p>
 
     <script src="https://js.stripe.com/v3/"></script>
 
@@ -33,13 +33,13 @@ if ($size != 0) {
                     <thead>
                     <tr>
                         <th style="text-align: center" scope="col">&nbsp;</th>
-                        <th style="text-align: center" scope="col">Référence</th>
-                        <th style="text-align: center" scope="col">Annoceur</th>
-                        <th style="text-align: center" scope="col">Nom</th>
-                        <th style="text-align: center" scope="col">Nombres</th>
-                        <th style="text-align: center" scope="col">Poids</th>
-                        <th style="text-align: center" scope="col">Prix</th>
-                        <th style="text-align: center" scope="col">total</th>
+                        <th style="text-align: center" scope="col">Reference</th>
+                        <th style="text-align: center" scope="col">Advertiser</th>
+                        <th style="text-align: center" scope="col">Name</th>
+                        <th style="text-align: center" scope="col">Numbers</th>
+                        <th style="text-align: center" scope="col">Weight</th>
+                        <th style="text-align: center" scope="col">Price</th>
+                        <th style="text-align: center" scope="col">Totale</th>
                         <th style="text-align: center" scope="col">+</th>
                         <th style="text-align: center" scope="col">-</th>
                     </tr>
@@ -144,7 +144,7 @@ if ($size != 0) {
                         <th style="text-align: center" scope="row"></th>
                         <th style="text-align: center" scope="row"></th>
                         <th style="text-align: center" scope="row"></th>
-                        <th style="text-align: center" scope="row">Livraison</th>
+                        <th style="text-align: center" scope="row">Delivery</th>
                         <th style="text-align: center" scope="row"><?= $delivery_price ?>€</th>
                         <th style="text-align: center" scope="row"></th>
                         <th style="text-align: center" scope="row"></th>
@@ -166,8 +166,8 @@ if ($size != 0) {
             </div>
             <div class="col-sm-12 row block_Carts_2">
                 <form method="post">
-                    <a href="<?= routeUrl() ?>Account/Livraison">Ajouter une adresse de livraison</a>
-                    <h4 <?= $errorDelivery ? 'style="color: red"' : '' ?> >Adresse de livraison :</h4>
+                    <a href="<?= routeUrl() ?>Account/Livraison">Add a shipping adress</a>
+                    <h4 <?= $errorDelivery ? 'style="color: red"' : '' ?> >Delivery adress:</h4>
                     <?php
                     foreach ($objCarts->selectAdresseLivraison($session) as $inputlivraison) {
                         ?>
@@ -191,7 +191,7 @@ if ($size != 0) {
 } else {
     ?>
     <div class="container block_Carts">
-        <p>Pas de produit dans votre panier : <a href="<?= routeUrl() ?>Products/1">Ajouter des produits</a></p>
+        <p>empty Carts : <a href="<?= routeUrl() ?>Products/1">Add products</a></p>
     </div>
     <?php
 }

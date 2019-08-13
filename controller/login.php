@@ -16,7 +16,7 @@ if(isset($_POST['Login'])){
     if (empty($email) || empty($password)) {
         $errorLog = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez remplir les champs obligatoire :
+                Please complete all required fields :
             </div>";
         return $errorLog;
     }
@@ -24,7 +24,7 @@ if(isset($_POST['Login'])){
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errorLog = "
             <div class='alert alert-danger' role='alert'>
-                Email inscrit incorrecte :
+                Incorrect registered Email :
             </div>";
         return $errorLog;
     }
@@ -32,7 +32,7 @@ if(isset($_POST['Login'])){
     if (!preg_match("/^[a-z\d_]{5,20}$/i", "$password")) {
         $errorLog = "
             <div class='alert alert-danger' role='alert'>
-               Password inscrit incorrecte :
+               Incorrect registered Password :
             </div>";
         return $errorLog;
     }

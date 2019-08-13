@@ -41,7 +41,7 @@ include "controller/farmers.php";
                     </div>
                     <hr>
                     <div id="minimis_region" class="farmers_block_1_form_1">
-                        <p>Département</p>
+                        <p>Department</p>
                     </div>
                     <div id="region_display" class="farmers_block_1_form_2">
                         <?php
@@ -61,12 +61,12 @@ include "controller/farmers.php";
                     </div>
                     <hr>
                     <div class="filters_block_1_form_submit">
-                        <a href="http://localhost/Karotte/Farmers/" id="linksFarmers">rechercher</a>
+                        <a href="http://localhost/Karotte/Farmers/" id="linksFarmers">Search</a>
                     </div>
                 </form>
             </div>
             <div class="col-sm-9 farmers_block_2">
-                <h2>Nos agriculteurs :</h2>
+                <h2>Our Farmers</h2>
                 <div class="row">
                     <?php
                     include "controller/display/displayFarmers.php";

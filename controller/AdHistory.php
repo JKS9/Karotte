@@ -21,7 +21,7 @@ if(isset($_POST['AddEdit'])){
     if (empty($Biography)) {
         $errorEdit = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez remplir les champs obligatoire :
+                Please complete all required fields :
             </div>";
         return $errorEdit;
     }
@@ -29,7 +29,7 @@ if(isset($_POST['AddEdit'])){
     if(strlen($Biography) > 250){
         $errorEdit = "
             <div class='alert alert-danger' role='alert'>
-                votre biographie doit faire moin de 250 caractéres :
+                Your biography mustbe less than 250 caracters
             </div>";
         return $errorEdit;
     }
@@ -47,7 +47,7 @@ if(isset($_POST['DeleteAdd'])){
 
     $errorEdit = "
         <div class='alert alert-success' role='alert'>
-            votre annonce à été supprimer
+           Your Add is delete
         </div>";
 }
 

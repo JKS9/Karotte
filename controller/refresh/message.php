@@ -41,8 +41,8 @@ if($nb > 0){
 }else{
     ?>
         <div class="erreur_message">
-            <p>vous n'avez pas de messages avec nos administrateur.</p>
-            <p>N'hésite pas à nous posez une question si ta besoin d'aide.</p>
+            <p>You do not have a mess with your administrators</p>
+            <p>Do not hesitate to ask us a question if you need help</p>
         </div>
     <?php
 }

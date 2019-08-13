@@ -53,47 +53,47 @@
 <section>
     <div class="container home_block_4" style="text-align: center">
         <div class="col-md-5">
-            <p>Etre un annonceur sur Karotte :</p>
+            <p>To be an advertiser on Karotte :</p>
             <ul style="list-style: none; padding: 0">
-                <li><p>Meilleur rémunération</p></li>
-                <li><p>Pas d'intermediaire</p></li>
-                <li><p>choisi sont prix</p></li>
-                <li><p>gére son stock</p></li>
-                <li><p>visible sur internet</p></li>
+                <li><p>Better pay</p></li>
+                <li><p>no intermediary</p></li>
+                <li><p>Chose his price</p></li>
+                <li><p>manages its stock</p></li>
+                <li><p>Visible on the internet</p></li>
             </ul>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-5">
-            <p>Etre un consommateur sur Karotte :</p>
+            <p>To be a consumer on Karotte</p>
             <ul style="list-style: none; padding: 0">
-                <li><p>produit de qualiter</p></li>
-                <li><p>produits de saison</p></li>
-                <li><p>Pas chére</p></li>
-                <li><p>Pivraison souss 3 jours</p></li>
-                <li><p>Eco-responsable</p></li>
+                <li><p>Quality product</p></li>
+                <li><p>Product of season</p></li>
+                <li><p>Cheap</p></li>
+                <li><p>Delivery within three days</p></li>
+                <li><p>Environmentally friendly</p></li>
             </ul>
         </div>
     </div>
 </section>
 <section>
     <div class="container Home_block_5" style="text-align: center">
-        <h4>Statistique</h4>
+        <h4>Statistics</h4>
         <div class="row">
             <div class="col-sm-3">
                 <span><?= $statistiqueFarmerSignUpDay; ?></span>
-                <p>Agriculteur inscrit Aujourd'hui</p>
+                <p>Farmers registered today</p>
             </div>
             <div class="col-sm-3">
                 <span><?= $statistiqueFarmerProductDay ?></span>
-                <p>Annonces postées Aujourd'hui</p>
+                <p>POst ads today</p>
             </div>
             <div class="col-sm-3">
                 <span><?= $statistiqueUsersSignUpDay ?></span>
-                <p>Inscription Aujourd'hui</p>
+                <p>Register today</p>
             </div>
             <div class="col-sm-3">
                 <span><?= $statistiqueUsersCommandeDay ?></span>
-                <p>Achats Aujourd'hui</p>
+                <p>Shopping today</p>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 if(isset($_SESSION['farmer'])){
     ?>
     <div class="row block_account_me_row">
-        <h4>Mes informations :</h4>
+        <h4>My information :</h4>
         <div class="col-sm-8">
             <div class="block_account_me_info_name">
                 <?php
@@ -68,14 +68,14 @@ if(isset($_SESSION['farmer'])){
             ?>
         </div>
         <div class="col-sm-12 button_account">
-            <a href="<?= routeUrl() ?>Account/Profil/Edit">éditer profil</a>
+            <a href="<?= routeUrl() ?>Account/Profil/Edit">Edit Profile</a>
         </div>
     </div>
     <?php
 }else{
     ?>
     <div class="row block_account_me_row">
-        <h4>Mes informations :</h4>
+        <h4>My information :</h4>
         <div class="col-sm-12">
             <div class="block_account_me_info_name">
                 <?php
@@ -98,7 +98,7 @@ if(isset($_SESSION['farmer'])){
                 ?>
             </div>
             <div class="button_account">
-                <a href="<?= routeUrl() ?>Account/Profil/Edit">éditer profil</a>
+                <a href="<?= routeUrl() ?>Account/Profil/Edit">Edit Profile</a>
             </div>
         </div>
     </div>

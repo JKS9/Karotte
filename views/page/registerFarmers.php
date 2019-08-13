@@ -1,5 +1,5 @@
 <div class="title">
-    <p><strong>Formulaire d'inscription Agriculteurs :</strong></p>
+    <p><strong>Farmer registration form :</strong></p>
 </div>
 <div class="row">
     <div class="col-sm-5">
@@ -58,9 +58,9 @@
                     <input type="number" name="PostalCode" placeholder="Postal Code">
                     <p><strong>City :</strong></p>
                     <input type="text" name="City" placeholder="City">
-                    <p><strong>Département :</strong></p>
+                    <p><strong>Department :</strong></p>
                     <select name="Region">
-                        <option>choisir un département</option>
+                        <option>Choise Department :</option>
                         <?php
                         foreach($selectRegion as $key => $value){
                             ?>

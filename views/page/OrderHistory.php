@@ -10,18 +10,18 @@ if(isset($_SESSION['user'])){
             </div>
             <div class="col-sm-4 block_Ordder_history_info_danger">
                 <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                <p>Attente confirmation</p>
+                <p>Confirmation waiting</p>
             </div>
             <div class="col-sm-4 block_Ordder_history_info_warning">
                 <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                <p>Livraison en cours</p>
+                <p>shipping in progress</p>
             </div>
             <div class="col-sm-4 block_Ordder_history_info_success">
                 <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                <p>Livraison faite</p>
+                <p>Delivery made</p>
             </div>
         </div>
-        <h2>Liste des commandes :</h2>
+        <h2>Order list :</h2>
         <?php
         $odersAll = $objDelivery->OrderDelivery($_SESSION['user'], '0');
         $nbOrdersAll = sizeof($odersAll);
@@ -46,11 +46,11 @@ if(isset($_SESSION['user'])){
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <p><strong>Référence n° : </strong></p>
+                                    <p><strong>referance n° : </strong></p>
                                     <p><?= $orderId ?></p>
                                 </div>
                                 <div class="col-lg-3">
-                                    <p><strong>Commander le :</strong></p>
+                                    <p><strong>Order date :</strong></p>
                                     <p><?= $orderAll['date_Commande'] ?></p>
                                 </div>
                                 <div class="col-lg-3">
@@ -64,12 +64,12 @@ if(isset($_SESSION['user'])){
                         </div>
                         <div class="col-lg-2">
                             <div class="block_Ordder_history_acheteur">
-                                <p><strong>Acheteur : </strong></p>
+                                <p><strong>Buyer : </strong></p>
                                 <p><?= $orderAll['user_lastName'] ?> <?= $orderAll['name_user'] ?></p>
                                 <p><?= $orderAll['phone'] ?></p>
                             </div>
                             <div class="block_Ordder_history_delivery">
-                                <p><strong>Adresse de livraison :</strong></p>
+                                <p><strong>Delivery address :</strong></p>
                                 <p><?= $orderAll['road_number'].' '.$orderAll['road'].' '.$orderAll['road_name'].','?></p>
                                 <p><?= $orderAll['city'].', '.$orderAll['postal_code'] ?></p>
                                 <p><?= $orderAll['region'].', '.$orderAll['country'] ?></p>
@@ -79,12 +79,12 @@ if(isset($_SESSION['user'])){
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th style="text-align: center" scope="col">Référence</th>
-                                    <th style="text-align: center" scope="col">Nom</th>
-                                    <th style="text-align: center" scope="col">Poids</th>
-                                    <th style="text-align: center" scope="col">Prix pièce</th>
-                                    <th style="text-align: center" scope="col">nombre</th>
-                                    <th style="text-align: center" scope="col">Prix total</th>
+                                    <th style="text-align: center" scope="col">Referance</th>
+                                    <th style="text-align: center" scope="col">Name</th>
+                                    <th style="text-align: center" scope="col">Weight</th>
+                                    <th style="text-align: center" scope="col">unit Price</th>
+                                    <th style="text-align: center" scope="col">number</th>
+                                    <th style="text-align: center" scope="col">Total Price</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -130,7 +130,7 @@ if(isset($_SESSION['user'])){
                                     <th style="text-align: center" scope="col"></th>
                                     <th style="text-align: center" scope="col"></th>
                                     <th style="text-align: center" scope="col"></th>
-                                    <th style="text-align: center" scope="col">Livraison</th>
+                                    <th style="text-align: center" scope="col">Delivery</th>
                                     <th style="text-align: center" scope="col">3 €</th>
                                 </tr>
                                 <?php
@@ -154,7 +154,7 @@ if(isset($_SESSION['user'])){
         }else{
             ?>
             <div class="block_delivery_no">
-                <p style="text-align: center">Vous n'avez pas de commande</p>
+                <p style="text-align: center">You have not command</p>
             </div>
             <?php
         }
@@ -170,18 +170,18 @@ if(isset($_SESSION['user'])){
             </div>
             <div class="col-sm-4 block_Ordder_history_info_danger">
                 <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                <p>Attente confirmation</p>
+                <p>Confirmation waiting</p>
             </div>
             <div class="col-sm-4 block_Ordder_history_info_warning">
                 <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                <p>Livraison en cours</p>
+                <p>shipping in progress</p>
             </div>
             <div class="col-sm-4 block_Ordder_history_info_success">
                 <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                <p>Livraison faite</p>
+                <p>Delivery made</p>
             </div>
         </div>
-        <h2>Liste des commandes :</h2>
+        <h2>Order list :</h2>
         <?php
         $odersAll = $objDelivery->OrderDelivery($_SESSION['farmer'], '0');
         $nbOrdersAll = sizeof($odersAll);
@@ -206,11 +206,11 @@ if(isset($_SESSION['user'])){
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <p><strong>Référence n° : </strong></p>
+                                    <p><strong>Reference n° : </strong></p>
                                     <p><?= $orderId ?></p>
                                 </div>
                                 <div class="col-lg-3">
-                                    <p><strong>Commander le :</strong></p>
+                                    <p><strong>Order date :</strong></p>
                                     <p><?= $orderAll['date_Commande'] ?></p>
                                 </div>
                                 <div class="col-lg-3">
@@ -224,12 +224,12 @@ if(isset($_SESSION['user'])){
                         </div>
                         <div class="col-lg-2">
                             <div class="block_Ordder_history_acheteur">
-                                <p><strong>Acheteur : </strong></p>
+                                <p><strong>Buyer : </strong></p>
                                 <p><?= $orderAll['user_lastName'] ?> <?= $orderAll['name_user'] ?></p>
                                 <p><?= $orderAll['phone'] ?></p>
                             </div>
                             <div class="block_Ordder_history_delivery">
-                                <p><strong>Adresse de livraison :</strong></p>
+                                <p><strong>Delivery address :</strong></p>
                                 <p><?= $orderAll['road_number'].' '.$orderAll['road'].' '.$orderAll['road_name'].','?></p>
                                 <p><?= $orderAll['city'].', '.$orderAll['postal_code'] ?></p>
                                 <p><?= $orderAll['region'].', '.$orderAll['country'] ?></p>
@@ -239,12 +239,12 @@ if(isset($_SESSION['user'])){
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th style="text-align: center" scope="col">Référence</th>
-                                    <th style="text-align: center" scope="col">Nom</th>
-                                    <th style="text-align: center" scope="col">Poids</th>
-                                    <th style="text-align: center" scope="col">Prix pièce</th>
-                                    <th style="text-align: center" scope="col">nombre</th>
-                                    <th style="text-align: center" scope="col">Prix total</th>
+                                    <th style="text-align: center" scope="col">Referance</th>
+                                    <th style="text-align: center" scope="col">Name</th>
+                                    <th style="text-align: center" scope="col">Weight</th>
+                                    <th style="text-align: center" scope="col">unit Price</th>
+                                    <th style="text-align: center" scope="col">number</th>
+                                    <th style="text-align: center" scope="col">Total Price</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -290,7 +290,7 @@ if(isset($_SESSION['user'])){
                                     <th style="text-align: center" scope="col"></th>
                                     <th style="text-align: center" scope="col"></th>
                                     <th style="text-align: center" scope="col"></th>
-                                    <th style="text-align: center" scope="col">Livraison</th>
+                                    <th style="text-align: center" scope="col">Delivery</th>
                                     <th style="text-align: center" scope="col">3 €</th>
                                 </tr>
                                 <?php
@@ -314,7 +314,7 @@ if(isset($_SESSION['user'])){
         }else{
             ?>
             <div class="block_delivery_no">
-                <p style="text-align: center">Vous n'avez pas de commande</p>
+                <p style="text-align: center">You have not command</p>
             </div>
             <?php
         }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 08 Août 2019 à 14:15
+-- Généré le :  Mar 13 Août 2019 à 09:44
 -- Version du serveur :  5.6.37
 -- Version de PHP :  7.1.8
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `KAROTTE`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Admin`
+--
+
+CREATE TABLE IF NOT EXISTS `Admin` (
+  `Id` int(9) NOT NULL,
+  `Login` varchar(255) NOT NULL,
+  `Pasword` varchar(255) NOT NULL,
+  `Actif` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `Admin`
+--
+
+INSERT INTO `Admin` (`Id`, `Login`, `Pasword`, `Actif`) VALUES
+(1, 'KarroteAdmin', 'KarroteAdmin', 1);
 
 -- --------------------------------------------------------
 
@@ -42,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `Cards` (
 
 INSERT INTO `Cards` (`Id`, `IdProduct`, `idFarmerProduct`, `Nb`, `Idusers`, `Status`, `creationDate`) VALUES
 (3, 17, 1, 5, 4, 0, '2019-08-07'),
-(4, 16, 1, 1, 4, 0, '2019-08-07');
+(5, 22, 1, 10, 1, 0, '2019-08-11');
 
 -- --------------------------------------------------------
 
@@ -66,8 +86,8 @@ CREATE TABLE IF NOT EXISTS `Commande` (
 --
 
 INSERT INTO `Commande` (`Id`, `IdUser`, `idFarmer`, `Prix`, `CreationDate`, `Status`, `IdDelivery`, `jwt`) VALUES
-(1, 4, 2, '15', '2019-07-02', 2, 1, ''),
-(2, 1, 1, '5.11', '2019-08-08', 0, 1, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwcm9kdWN0cyI6W3sicHJvZHVjdF9pZCI6IjE2IiwiZmFybWVyX2lkIjoiMSIsInF1YW50aXR5IjoiMSIsInByaWNlIjoyLjEwOTk5OTk5OTk5OTk5OTl9XSwiZGVsaXZlcnlQcmljZSI6MywiY2xpZW50X2lkIjoiMSIsImRlbGl2ZXJ5X2lkIjoiMSIsImV4dCI6MTU2NTI3MzQ5MX0.epU3QmRqJA9T_ooIMKBP7ThWUypkAkr1WeWhYt7Y_vga');
+(1, 1, 2, '15', '2019-07-02', 2, 1, ''),
+(2, 2, 2, '5.11', '2019-08-08', 0, 1, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwcm9kdWN0cyI6W3sicHJvZHVjdF9pZCI6IjE2IiwiZmFybWVyX2lkIjoiMSIsInF1YW50aXR5IjoiMSIsInByaWNlIjoyLjEwOTk5OTk5OTk5OTk5OTl9XSwiZGVsaXZlcnlQcmljZSI6MywiY2xpZW50X2lkIjoiMSIsImRlbGl2ZXJ5X2lkIjoiMSIsImV4dCI6MTU2NTI3MzQ5MX0.epU3QmRqJA9T_ooIMKBP7ThWUypkAkr1WeWhYt7Y_vga');
 
 -- --------------------------------------------------------
 
@@ -86,6 +106,7 @@ CREATE TABLE IF NOT EXISTS `Conversation` (
 --
 
 INSERT INTO `Conversation` (`Id`, `Iduser`, `Actif`) VALUES
+(0, 2, 1),
 (1, 4, 1);
 
 -- --------------------------------------------------------
@@ -106,16 +127,19 @@ CREATE TABLE IF NOT EXISTS `Delivery` (
   `County` varchar(255) NOT NULL,
   `Phone` varchar(255) NOT NULL,
   `Actif` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `Delivery`
 --
 
 INSERT INTO `Delivery` (`Id`, `IdUser`, `Road`, `RoadName`, `RoadNumber`, `PostalCode`, `City`, `Region`, `County`, `Phone`, `Actif`) VALUES
-(1, 1, 'Rue', 'ernest renan', '26', '95240', 'eaubonne', '07', 'France', '0663571407', 1),
-(3, 1, 'Rue', 'ernest renant', '56', '95600', 'Paris', '11', 'France', '0663571407', 1),
-(4, 4, 'Rue', 'de la cale', '90', '95600', 'eaubonne', '08', 'France', '0663571407', 1);
+(1, 1, 'Rue', 'ernest renan', '26', '95240', 'eaubonne', '07', 'France', '0663571407', 0),
+(3, 1, 'Rue', 'ernest renant', '56', '95600', 'Paris', '11', 'France', '0663571407', 0),
+(4, 4, 'Rue', 'de la cale', '90', '95600', 'eaubonne', '08', 'France', '0663571407', 1),
+(5, 1, 'Rue', 'de la cale', '29', '95600', 'landunvez', '05', 'France', '0663571407', 0),
+(6, 1, 'Rue', 'ernest renan', '29', '95600', 'eaubonne', '13', 'France', '0663571407', 0),
+(7, 1, 'Rue', 'ernest renan', '28', '95600', 'eaubonne', '02', 'France', '0101010101', 1);
 
 -- --------------------------------------------------------
 
@@ -293,8 +317,8 @@ CREATE TABLE IF NOT EXISTS `Farmers` (
 --
 
 INSERT INTO `Farmers` (`Id`, `IdUser`, `Type`, `Biography`, `Road`, `RoadName`, `roadNumber`, `PostalCode`, `City`, `Region`, `County`, `Phone`, `Bic`, `IBAN`, `creationDate`) VALUES
-(1, 2, '1', 'jaime cultiver', 'street', 'ernest renant', '28', '95600', 'Eaubonne', 29, 'France', '0663571407', '', '', '2019-06-28'),
-(2, 4, '2', 'bonjour', 'Rue', 'ernest renan', '29', '75001', 'Paris', 14, 'France', '663571408', '123256', '1223', '2019-06-28');
+(1, 2, '1', 'jaime cultiver', 'street', 'ernest renant', '28', '95600', 'Eaubonne', 29, 'France', '0663571407', '0', '0', '2019-06-28'),
+(2, 4, '2', 'bonjour', 'Rue', 'ernest renan', '29', '75001', 'Paris', 55, 'France', '663571408', '0', '0', '2019-06-28');
 
 -- --------------------------------------------------------
 
@@ -306,7 +330,7 @@ CREATE TABLE IF NOT EXISTS `ListeProduit` (
   `Id` int(9) NOT NULL,
   `Name` varchar(255) NOT NULL,
   `Actif` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `ListeProduit`
@@ -363,8 +387,9 @@ INSERT INTO `ListeProduit` (`Id`, `Name`, `Actif`) VALUES
 (61, 'Rhubarbe', 1),
 (62, 'Roquette', 1),
 (63, 'Rutabaga', 1),
-(65, 'Salsifi', 1),
-(68, 'Tomate', 1);
+(65, 'Salsifi', 0),
+(68, 'Tomate', 0),
+(69, 'Choux Rouge', 0);
 
 -- --------------------------------------------------------
 
@@ -378,7 +403,7 @@ CREATE TABLE IF NOT EXISTS `Messages` (
   `IdRecu` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `message` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `Messages`
@@ -387,10 +412,20 @@ CREATE TABLE IF NOT EXISTS `Messages` (
 INSERT INTO `Messages` (`id`, `idEnvoi`, `IdRecu`, `date`, `message`) VALUES
 (1, '4', 'Admin', '2019-08-06', 'salut'),
 (2, 'Admin', '4', '2019-08-06', 'salut ! je peut vous aider ?'),
-(3, '4', 'Admin', '2019-08-06', 'hello'),
+(3, 'Admin', '1', '2019-08-06', 'hello'),
 (4, '1', 'Admin', '2019-08-06', 'hello'),
 (5, '4', 'Admin', '2019-08-07', 'bastien nicolas'),
-(6, '4', 'Admin', '2019-08-07', 'ok');
+(6, '4', 'Admin', '2019-08-07', 'ok'),
+(7, '1', 'Admin', '2019-08-10', 'lol'),
+(8, '1', 'Admin', '2019-08-10', 'mdr'),
+(9, '1', 'Admin', '2019-08-10', 'ajoute moi'),
+(10, '1', 'Admin', '2019-08-10', 'lol'),
+(11, '1', 'Admin', '2019-08-10', 'mpm'),
+(12, '1', 'Admin', '2019-08-10', 'ol'),
+(13, 'Admin', '4', '2019-08-12', 'lol'),
+(14, 'Admin', '4', '2019-08-12', 'ok'),
+(15, '2', 'Admin', '2019-08-13', 'bonjour'),
+(16, 'Admin', '2', '2019-08-13', 'bonjour');
 
 -- --------------------------------------------------------
 
@@ -410,21 +445,20 @@ CREATE TABLE IF NOT EXISTS `Produit` (
   `Region` int(9) NOT NULL,
   `CreationDate` date DEFAULT NULL,
   `Actif` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `Produit`
 --
 
 INSERT INTO `Produit` (`Id`, `IdListeProduit`, `Prix`, `Biographie`, `Qualiter`, `UnitWeight`, `NbStock`, `IdFarmers`, `Region`, `CreationDate`, `Actif`) VALUES
-(16, 1, '2', 'ail jai mal', '1', '500g', '199', 1, 29, '2019-07-23', 1),
-(17, 2, '2', 'artichaut chaud', '1', '500g', '200', 1, 29, '2019-07-23', 1),
-(18, 3, '2', 'pise vert', '1', '500g', '200', 1, 29, '2019-07-23', 1),
-(19, 1, '2', 'ail ouille', '2', '200g', '200', 2, 55, '2019-07-23', 1),
-(20, 2, '2', 'j''aime les artichauts', '2', '200g', '200', 2, 55, '2019-07-23', 1),
-(21, 3, '2', 'tu va spisser vert', '2', '200g', '200', 2, 55, '2019-07-23', 1),
-(22, 5, '3', 'j''aime les avocats', '2', '200g', '200', 2, 55, '2019-07-25', 1),
-(23, 18, '3', 'chayote', '2', '200g', '200', 2, 14, '2019-08-06', 0);
+(16, 1, '2', 'ail jai mal', '1', '500g', '199', 2, 29, '2019-07-23', 1),
+(17, 2, '2', 'artichaut chaud', '1', '500g', '200', 2, 29, '2019-07-23', 1),
+(18, 3, '2', 'pise vert', '1', '500g', '200', 2, 29, '2019-07-23', 1),
+(19, 1, '2', 'lol', '2', '200g', '200', 1, 55, '2019-07-23', 1),
+(20, 2, '2', 'j''aime les artichauts', '2', '200g', '200', 1, 55, '2019-07-23', 1),
+(21, 3, '2', 'tu va spisser vert', '2', '200g', '200', 1, 55, '2019-07-23', 1),
+(22, 5, '3', 'j''aime les avocats', '2', '200g', '200', 1, 55, '2019-07-25', 1);
 
 -- --------------------------------------------------------
 
@@ -449,7 +483,7 @@ CREATE TABLE IF NOT EXISTS `ProduitOrder` (
 INSERT INTO `ProduitOrder` (`Id`, `IdCommande`, `IdProduit`, `NbProduits`, `idFarmerProduct`, `Status`, `creationDate`) VALUES
 (1, 1, 19, 2, 2, 2, '2019-07-05'),
 (2, 1, 19, 3, 2, 2, '2019-07-02'),
-(3, 2, 16, 1, 1, 0, '2019-08-08');
+(3, 2, 16, 1, 2, 0, '2019-08-08');
 
 -- --------------------------------------------------------
 
@@ -478,12 +512,18 @@ CREATE TABLE IF NOT EXISTS `Users` (
 INSERT INTO `Users` (`Id`, `Name`, `LastName`, `Email`, `Password`, `DateBirth`, `Type`, `Actif`, `Status`, `CreationDate`, `CreationIp`) VALUES
 (1, 'etiennes', 'juzans', 'juzans.etienne@gmail.com', 'totote123', '1980-06-03', 1, 0, 1, '2019-06-27', '127.0.0.1'),
 (2, 'Charles', 'juzans', 'juzans@gmail.com', 'totote123', '1997-05-13', 2, 0, 1, '2019-06-28', '127.0.0.1'),
-(3, 'bebe', 'juzans', 'etienne@gmail.com', 'totote123', '1997-12-05', 1, 0, 1, '2019-07-02', '127.0.0.1'),
+(3, 'dede', 'juzans', 'etienne@gmail.com', 'totote123', '1997-12-05', 1, 1, 1, '2019-07-02', '127.0.0.1'),
 (4, 'jule', 'juzan', 'lolololololol@gmail.com', 'totote123', '1995-05-13', 2, 0, 1, '2019-07-11', '127.0.0.1');
 
 --
 -- Index pour les tables exportées
 --
+
+--
+-- Index pour la table `Admin`
+--
+ALTER TABLE `Admin`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Index pour la table `Cards`
@@ -564,6 +604,11 @@ ALTER TABLE `Users`
 --
 
 --
+-- AUTO_INCREMENT pour la table `Admin`
+--
+ALTER TABLE `Admin`
+  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT pour la table `Cards`
 --
 ALTER TABLE `Cards`
@@ -577,7 +622,7 @@ ALTER TABLE `Commande`
 -- AUTO_INCREMENT pour la table `Delivery`
 --
 ALTER TABLE `Delivery`
-  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `Departement`
 --
@@ -597,17 +642,17 @@ ALTER TABLE `Farmers`
 -- AUTO_INCREMENT pour la table `ListeProduit`
 --
 ALTER TABLE `ListeProduit`
-  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
+  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT pour la table `Messages`
 --
 ALTER TABLE `Messages`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pour la table `Produit`
 --
 ALTER TABLE `Produit`
-  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT pour la table `ProduitOrder`
 --

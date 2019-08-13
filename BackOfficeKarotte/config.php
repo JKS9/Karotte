@@ -10,7 +10,7 @@ spl_autoload_register('chargerClasse');
 
 $classe = "";
 function chargerClasse($classe){
-    include 'models/' . $classe . '.class.php';
+    include 'model/' . $classe . '.class.php';
 }
 
 function routeUrlBO(){

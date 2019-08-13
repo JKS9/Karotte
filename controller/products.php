@@ -30,13 +30,13 @@ if(isset($_POST['addCarts'])){
             $objCarts->updateCarts($nb, $idcarts);
 
             $erreurAdd =  "<div class='alert alert-success' role='alert'>
-                profuit ajouter au panier :
+                Product added to shopping cart :
             </div>";
 
         }else{
             $objCarts->insertCarts($iduser, $nb, $idFarmerProduct, $idproduits);
             $erreurAdd =  "<div class='alert alert-success' role='alert'>
-                profuit ajouter au panier :
+                Product added to shopping cart :
             </div>";
         }
     }else if(isset($_SESSION['farmer'])){
@@ -54,17 +54,17 @@ if(isset($_POST['addCarts'])){
             $objCarts->updateCarts($nb, $idcarts);
 
             $erreurAdd =  "<div class='alert alert-success' role='alert'>
-                profuit ajouter au panier :
+                Product added to shopping cart :
             </div>";
         }else{
             $objCarts->insertCarts($iduser, $nb, $idFarmerProduct, $idproduits);
             $erreurAdd =  "<div class='alert alert-success' role='alert'>
-                profuit ajouter au panier :
+                Product added to shopping cart :
             </div>";
         }
     }else{
         $erreurAdd =  "<div class='alert alert-danger' role='alert'>
-                Veuillez vous conecter pour ajouter un produit à votre panier :
+                Please sign in to add a product to your cart
             </div>";
     }
 }

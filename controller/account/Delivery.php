@@ -47,14 +47,14 @@ if(isset($_POST['infoDelivery'])){
             } else {
                 $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Le nom ne remplis pas les conditions de formulaire.
+                The Name does not meet the conditions of the form.
             </div>";
                 return $errorinfoDelivery;
             }
         } else {
             $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Vous devez remplir le(s) champ(s) vide.
+                You must fill in the empty fields :
             </div>";
             return $errorinfoDelivery;
         }
@@ -67,14 +67,14 @@ if(isset($_POST['infoDelivery'])){
             }else{
                 $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                La valeur sélectionner n'est pas répertorier, veuillez choisir une valeur ('Rue', 'Avenue', 'boulevard', 'impasse');
+                The selected value is not listed :         
             </div>";
                 return $errorinfoDelivery;
             }
         } else {
             $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Vous devez remplir le(s) champ(s) vide.
+                You must fill in the empty fields :
             </div>";
             return $errorinfoDelivery;
         }
@@ -87,14 +87,14 @@ if(isset($_POST['infoDelivery'])){
             } else {
                 $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Le nom ne remplis pas les conditions de formulaire.
+                The Name of the street does not meet the conditions of the form.
             </div>";
                 return $errorinfoDelivery;
             }
         } else {
             $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Vous devez remplir le(s) champ(s) vide.
+                You must fill in the empty fields :
             </div>";
             return $errorinfoDelivery;
         }
@@ -107,14 +107,14 @@ if(isset($_POST['infoDelivery'])){
             } else {
                 $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Le nom ne remplis pas les conditions de formulaire.
+                 The City does not meet the conditions of the form.
             </div>";
                 return $errorinfoDelivery;
             }
         } else {
             $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Vous devez remplir le(s) champ(s) vide.
+                You must fill in the empty fields :
             </div>";
             return $errorinfoDelivery;
         }
@@ -127,14 +127,14 @@ if(isset($_POST['infoDelivery'])){
             } else {
                 $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Le nom ne remplis pas les conditions de formulaire.
+                The Postal code does not meet the conditions of the form.
             </div>";
                 return $errorinfoDelivery;
             }
         } else {
             $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Vous devez remplir le(s) champ(s) vide.
+                You must fill in the empty fields :
             </div>";
             return $errorinfoDelivery;
         }
@@ -147,14 +147,14 @@ if(isset($_POST['infoDelivery'])){
             } else {
                 $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Le nom ne remplis pas les conditions de formulaire.
+                The phone number does not meet the conditions of the form.
             </div>";
                 return $errorinfoDelivery;
             }
         } else {
             $errorinfoDelivery = "
             <div class='alert alert-danger' role='alert'>
-                Vous devez remplir le(s) champ(s) vide.
+                You must fill in the empty fields :
             </div>";
             return $errorinfoDelivery;
         }
@@ -196,14 +196,14 @@ if(isset($_POST['Addadresse'])){
         } else {
             $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Le nom ne remplis pas les conditions de formulaire.
+            The number of the street does not meet the conditions of the form.
         </div>";
             return $errorAddadresse;
         }
     } else {
         $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Vous devez remplir le(s) champ(s) vide.
+            You must fill in the empty fields :
         </div>";
         return $errorAddadresse;
     }
@@ -214,14 +214,14 @@ if(isset($_POST['Addadresse'])){
         }else{
             $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            La valeur sélectionner n'est pas répertorier, veuillez choisir une valeur ('Rue', 'Avenue', 'boulevard', 'impasse');
+                The selected value is not listed :         
         </div>";
             return $errorAddadresse;
         }
     } else {
         $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Vous devez remplir le(s) champ(s) vide.
+           You must fill in the empty fields :
         </div>";
         return $errorAddadresse;
     }
@@ -232,14 +232,14 @@ if(isset($_POST['Addadresse'])){
         } else {
             $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Le nom ne remplis pas les conditions de formulaire.
+            The Name of the street does not meet the conditions of the form.
         </div>";
             return $errorAddadresse;
         }
     } else {
         $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Vous devez remplir le(s) champ(s) vide.
+            You must fill in the empty fields :
         </div>";
         return $errorAddadresse;
     }
@@ -250,14 +250,14 @@ if(isset($_POST['Addadresse'])){
         } else {
             $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Le nom ne remplis pas les conditions de formulaire.
+            The City does not meet the conditions of the form.
         </div>";
             return $errorAddadresse;
         }
     } else {
         $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Vous devez remplir le(s) champ(s) vide.
+            You must fill in the empty fields :
         </div>";
         return $errorAddadresse;
     }
@@ -268,14 +268,14 @@ if(isset($_POST['Addadresse'])){
         } else {
             $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Le nom ne remplis pas les conditions de formulaire.
+            The Postal code does not meet the conditions of the form.
         </div>";
             return $errorAddadresse;
         }
     } else {
         $errorinfoDelivery = "
         <div class='alert alert-danger' role='alert'>
-            Vous devez remplir le(s) champ(s) vide.
+            You must fill in the empty fields :
         </div>";
         return $errorAddadresse;
     }
@@ -286,14 +286,14 @@ if(isset($_POST['Addadresse'])){
         } else {
             $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Le nom ne remplis pas les conditions de formulaire.
+             The Phone number does not meet the conditions of the form.
         </div>";
             return $errorAddadresse;
         }
     } else {
         $errorAddadresse = "
         <div class='alert alert-danger' role='alert'>
-            Vous devez remplir le(s) champ(s) vide.
+            You must fill in the empty fields :
         </div>";
         return $errorAddadresse;
     }

@@ -29,31 +29,31 @@ require "controller/Delivery.php";
 </script>
 <div class="container block_delivery">
     <div class="row">
-        <h1> Mes livraison faite et à faire</h1>
+        <h1>My Deliveries made and to be made :</h1>
         <div class="col-lg-12 block_delivery_1">
             <div class="row">
                 <form method="post">
                     <div class="col-sm-6 form-group">
-                        <label>Référence :</label>
+                        <label>Reference :</label>
                         <input class="input_filter" style="padding: 7px 15px;width: 250px;background: #f0f0f0;border-radius: 3px;border: none" type="text" name="Id" />
                         <div class="form-group filtreDeliverydiv">
-                            <a href="" id="linksId">Rechercher</a>
+                            <a href="" id="linksId">Search</a>
                         </div>
                     </div>
                     <div class="col-sm-6 form-group">
                         <label>status :</label>
                         <select class="input_filter" style="width: 200px;border: none;background: #f3f3f3;padding: 3px;color: #000;"name="Status">
-                            <option>choisir status</option>
-                            <option value="0">Livraison à faire</option>
-                            <option value="1">Livraison en cour</option>
-                            <option value="2">Livraison faite</option>
+                            <option>Choise status</option>
+                            <option value="0">Delivery to do</option>
+                            <option value="1">Shipping in progress</option>
+                            <option value="2">Delivery made</option>
                         </select>
                         <div class="form-group filtreDeliverydiv">
-                            <a href="" id="linksStatus">Rechercher</a>
+                            <a href="" id="linksStatus">Search</a>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <p>Faite une recherche filtrer pour mieux vous y retrouvez soit par 'référence de commande ou Status de livraison'</p>
+                        <p>Do a filtered search to better find you euther by order reference or delivery status :</p>
                     </div>
                 </form>
             </div>
@@ -63,15 +63,15 @@ require "controller/Delivery.php";
                 </div>
                 <div class="col-sm-4 block_Ordder_history_info_danger">
                     <div class="p-3 mb-2 bg-danger text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                    <p>Attente confirmation</p>
+                    <p>Confirmation waiting</p>
                 </div>
                 <div class="col-sm-4 block_Ordder_history_info_warning">
                     <div class="p-3 mb-2 bg-warning text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                    <p>Livraison en cours</p>
+                    <p>Shipping in progress</p>
                 </div>
                 <div class="col-sm-4 block_Ordder_history_info_success">
                     <div class="p-3 mb-2 bg-success text-white" style="width: 50px;height: 50px;border-radius: 25px;margin: 0 auto;border: 1px solid #fff;"></div>
-                    <p>Livraison faite</p>
+                    <p>Delivery made</p>
                 </div>
             </div>
         </div>

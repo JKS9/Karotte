@@ -31,7 +31,7 @@ if(isset($_POST['AddProducts'])){
     if (empty($Price) || empty($Products) || empty($UnitWeight) || empty($NbStore) || empty($Biography)) {
         $error = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez remplir les champs obligatoire :
+                Please complete all required fields :
             </div>";
         return $error;
     }
@@ -39,7 +39,7 @@ if(isset($_POST['AddProducts'])){
     if($Price >= 1000){
         $errorPrice = "
             <div class='alert alert-danger' role='alert'>
-                Prix inscrit 'trop élever' :
+                Price too high
             </div>";
         return $errorPrice;
     }
@@ -47,7 +47,7 @@ if(isset($_POST['AddProducts'])){
     if($infoProducts == 0){
         $errorProducts = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez choisir un produits contenu dans la liste 'produits' :
+                Please select a product from the product list
             </div>";
         return $errorProducts;
     }
@@ -55,7 +55,7 @@ if(isset($_POST['AddProducts'])){
     if(!in_array($UnitWeight, $UnitWeightValue)){
         $errorUnitWeight = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez choisir un poinds contenu dans la liste 'poids' :
+                Please select a weight from the weight list
             </div>";
         return $errorUnitWeight;
     }
@@ -63,7 +63,7 @@ if(isset($_POST['AddProducts'])){
     if($NbStore < 2 || $NbStore > 5000){
         $errorNbStore = "
             <div class='alert alert-danger' role='alert'>
-                votre sotck de produits doit faire 2kg minimum et 5000kg maximum :
+                Your product stock must weight 2kg minimum and 5 tonnes maximum
             </div>";
         return $errorNbStore;
     }
@@ -71,7 +71,7 @@ if(isset($_POST['AddProducts'])){
     if(strlen($Biography) > 250){
         $errorBiography = "
             <div class='alert alert-danger' role='alert'>
-                votre biographie doit faire moin de 250 caractéres :
+                Your biography mustbe less than 250 caracters :
             </div>";
         return $errorBiography;
     }
@@ -81,7 +81,7 @@ if(isset($_POST['AddProducts'])){
     $addProduitsFarmers = $objProducts->AddProductsFarmers($_SESSION['farmer'],$Products);
     $error = "
         <div class='alert alert-success' role='alert'>
-            Votre produits à bien été ajouter : veuillez attendre confirmation de nos administrateur
+            Your product was added. PLease wait for confirmation from our administrators
         </div>";
 }
 
@@ -103,7 +103,7 @@ if(isset($_POST['NewProducts'])){
     if (!(in_array($file_type, $extensionsAutorisees))) {
         $errorAddproduits = "
         <div class='alert alert-danger' role='alert'>
-            Votre image doit impérativement etre '.jpg' :
+            Your image must imperatively be '.jpg' :
         </div>";
         return $errorAddproduits;
     }
@@ -114,14 +114,14 @@ if(isset($_POST['NewProducts'])){
 
         $errorAddproduits = "
         <div class='alert alert-success' role='alert'>
-            Votre demande à été envoi à un administrateur : fichier valide
+            Your request has been sent to an administrator
         </div>";
         return $errorAddproduits;
 
     } else {
         $errorAddproduits = "
         <div class='alert alert-danger' role='alert'>
-            image incorrecte :
+            Incorrect Picture :
         </div>";
         return $errorAddproduits;
     }

@@ -1,19 +1,19 @@
-<h3>Livraison faite sur ce produit :</h3>
+<h3>Delivery made on this item :</h3>
 <div class="block_Ad_Historie_2_Produit_livraison_table">
     <table class="table table-striped">
         <thead class="thead-dark">
         <tr>
-            <th style="text-align: center" scope="col">IdCommande</th>
-            <th style="text-align: center" scope="col">IdProduit</th>
+            <th style="text-align: center" scope="col">IdOrder</th>
+            <th style="text-align: center" scope="col">IdProduict</th>
             <th style="text-align: center" scope="col">Name</th>
-            <th style="text-align: center" scope="col">Nombres</th>
-            <th style="text-align: center" scope="col">Poids</th>
-            <th style="text-align: center" scope="col">Prix unitaire</th>
-            <th style="text-align: center" scope="col">Prix totale</th>
+            <th style="text-align: center" scope="col">Number</th>
+            <th style="text-align: center" scope="col">Weight</th>
+            <th style="text-align: center" scope="col">Unit Price</th>
+            <th style="text-align: center" scope="col">Total Price</th>
             <th style="text-align: center" scope="col">Commission %</th>
             <th style="text-align: center" scope="col">Commission €</th>
             <th style="text-align: center" scope="col">TTC</th>
-            <th style="text-align: center" scope="col">Livraison</th>
+            <th style="text-align: center" scope="col">Delivery</th>
             <th style="text-align: center" scope="col">Date</th>
         </tr>
         </thead>
@@ -44,7 +44,7 @@
                         scope="col"><?= ($produitBuy['qualiter'] == 1) ? '15%' : '20%' ?></th>
                     <th style="text-align: center" scope="col"><?= $commision ?></th>
                     <th style="text-align: center" scope="col"><?= $total - $commision ?></th>
-                    <th style="text-align: center" scope="col">Livrer</th>
+                    <th style="text-align: center" scope="col">Deliveried</th>
                     <th style="text-align: center" scope="col"><?= $produitBuy['creationDate'] ?></th>
                 </tr>
                 <?php
@@ -59,7 +59,7 @@
                 <th style="text-align: center" scope="col"></th>
                 <th style="text-align: center" scope="col"></th>
                 <th style="text-align: center" scope="col"></th>
-                <th style="text-align: center" scope="col">pas de livraison</th>
+                <th style="text-align: center" scope="col">Not delivery</th>
                 <th style="text-align: center" scope="col"></th>
                 <th style="text-align: center" scope="col"></th>
                 <th style="text-align: center" scope="col"></th>

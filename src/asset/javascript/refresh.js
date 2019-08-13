@@ -1,7 +1,6 @@
 function notifCarts() {
     $.ajax({
         url: "http://localhost/Karotte/controller/refresh/cards.php",
-
         ifModified:true,
         success: function(content){
             $('#reloadCart').html(content); //id de la <div> à refresh
@@ -21,7 +20,7 @@ function message() {
         }
 
     });
-    setTimeout(message, 1500000000); //refresh toutes secondes (1 minute = 60000)
+    setTimeout(message, 1000); //refresh toutes secondes (1 minute = 60000)
 }
 
 

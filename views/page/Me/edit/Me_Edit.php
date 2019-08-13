@@ -4,7 +4,7 @@ if(isset($_SESSION['farmer'])){
     $selectRegion = $objRegister->displayRegion();
     ?>
     <div class="row block_account_me_edit">
-        <h4>Modifier mes informations :</h4>
+        <h4>Edit my information :</h4>
         <?= $errorInfoPerso ?>
         <?= $errorProfilPicture ?>
         <?= $errorInfoPersoFarmer ?>
@@ -13,11 +13,11 @@ if(isset($_SESSION['farmer'])){
             ?>
             <form method="post">
                 <div class="col-md-12">
-                    <label>Nom :</label>
+                    <label>Name :</label>
                     <input type="text" name="Name" value="<?= $edit['Name']?>">
                 </div>
                 <div class="col-md-12">
-                    <label>Prénom :</label>
+                    <label>Surname :</label>
                     <input type="text" name="LastName" value="<?= $edit['LastName']?>">
                 </div>
                 <div class="col-md-12">
@@ -25,11 +25,11 @@ if(isset($_SESSION['farmer'])){
                     <input type="text" name="Email" value="<?= $edit['Email']?>">
                 </div>
                 <div class="col-md-12">
-                    <label>Date de naissance :</label>
+                    <label>Date of birth :</label>
                     <input type="date" name="DateBirth" value="<?= $edit['DateBirth']?>">
                 </div>
                 <div class="col-md-12 editAccount">
-                    <input type="submit" class="ButtonPay" name="infoPerso" value="edit">
+                    <input type="submit" class="ButtonPay" name="infoPerso" value="Edit">
                 </div>
             </form>
             <?php
@@ -49,10 +49,10 @@ if(isset($_SESSION['farmer'])){
                     <?php
                 }
                 ?>
-                <h4>photo de profil :</h4>
+                <h4>picture profile :</h4>
                 <input type="file" name="file_picture">
                 <div class="editAccount">
-                    <input type="submit" name="picture" value="ajouter"/>
+                    <input type="submit" name="picture" value="Add"/>
                 </div>
             </div>
         </form>
@@ -66,33 +66,33 @@ if(isset($_SESSION['farmer'])){
                         <textarea name="Biography"><?= $editFarmer['Biography']?></textarea>
                     </div>
                     <div class="col-md-12">
-                        <label>Numéro de rue :</label>
+                        <label>Number street :</label>
                         <input type="text" name="roadNumber" value="<?= $editFarmer['roadNumber']?>">
                     </div>
                     <div class="col-md-12">
-                        <label>rue :</label>
+                        <label>Street :</label>
                         <input type="text" name="Road" value="<?= $editFarmer['Road']?>">
                     </div>
                     <div class="col-md-12">
-                        <label>Nom de rue :</label>
+                        <label>Name of the street :</label>
                         <input type="text" name="RoadName" value="<?= $editFarmer['RoadName']?>">
                     </div>
                     <div class="col-md-12">
-                        <label>Ville :</label>
+                        <label>City :</label>
                         <input type="text" name="City" value="<?= $editFarmer['City']?>">
                     </div>
                     <div class="col-md-12">
-                        <label>Code postal :</label>
+                        <label>Postal code :</label>
                         <input type="text" name="PostalCode" value="<?= $editFarmer['PostalCode']?>">
                     </div>
                     <div class="col-md-12">
-                        <label>Département :</label>
+                        <label>Department :</label>
                         <label><?= $objProfile->infoRegion($editFarmer['Region']) ?> (<?= $editFarmer['Region'] ?>) </label>
                     </div>
                     <div class="col-md-12 region_account">
-                        <label>Nouveau département :</label>
+                        <label>New department :</label>
                         <select name="Region">
-                            <option>choisir un département</option>
+                            <option>choise one dpartment</option>
                             <?php
                             foreach($selectRegion as $key => $value){
                                 ?>
@@ -107,7 +107,7 @@ if(isset($_SESSION['farmer'])){
                         <input type="number" name="Phone" value="<?= $editFarmer['Phone']?>">
                     </div>
                     <div class="col-md-12 editAccountend">
-                        <input type="submit" name="infoPersofarmer" value="sauvgarder">
+                        <input type="submit" name="infoPersofarmer" value="Save">
                     </div>
                     <?php
                 }
@@ -119,18 +119,18 @@ if(isset($_SESSION['farmer'])){
 }else{
     ?>
     <div class="row block_account_me_edit">
-        <h4>Modifier mes informations :</h4>
+        <h4>Edit my information :</h4>
         <?= $errorInfoPerso ?>
         <?php
         foreach($objProfile->infoUser($_SESSION['user']) as $edit) {
         ?>
             <form method="post">
                 <div class="col-md-12">
-                    <label>Nom :</label>
+                    <label>Name :</label>
                     <input type="text" name="Name" value="<?= $edit['Name'] ?>">
                 </div>
                 <div class="col-md-12">
-                    <label>Prénom :</label>
+                    <label>Surname :</label>
                     <input type="text" name="LastName" value="<?= $edit['LastName'] ?>">
                 </div>
                 <div class="col-md-12">
@@ -138,11 +138,11 @@ if(isset($_SESSION['farmer'])){
                     <input type="text" name="Email" value="<?= $edit['Email'] ?>">
                 </div>
                 <div class="col-md-12">
-                    <label>Date de naissance :</label>
+                    <label>Date of birth :</label>
                     <input type="date" name="DateBirth" value="<?= $edit['DateBirth'] ?>">
                 </div>
                 <div class="col-md-12 editAccountend">
-                    <input type="submit" name="infoPerso" value="sauvgarder">
+                    <input type="submit" name="infoPerso" value="Save">
                 </div>
             </form>
         <?php

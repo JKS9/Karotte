@@ -85,8 +85,17 @@ class profile extends connect
     }
 
     public function InsertMmessage($message,$iduser){
-        $date = date("Y-m-d");
-        $req = $this -> _connect ->exec("INSERT INTO `Messages`(`idEnvoi`, `IdRecu`, `date`, `message`) VALUES ('$iduser','Admin','$date','$message')");
+        $reqverif = $this ->_connect -> query("SELECT * FROM `Conversation` WHERE Iduser = '$iduser'");
+        $nb = $reqverif->rowCount();
+
+        if($nb == 0){
+            $reqIn = $this -> _connect -> exec("INSERT INTO `Conversation`(`iduser`,`Actif`) VALUES ('$iduser','1')");
+            $date = date("Y-m-d");
+            $reqMessage = $this -> _connect ->exec("INSERT INTO `Messages`(`idEnvoi`, `IdRecu`, `date`, `message`) VALUES ('$iduser','Admin','$date','$message')");
+        }else{
+            $date = date("Y-m-d");
+            $req = $this -> _connect ->exec("INSERT INTO `Messages`(`idEnvoi`, `IdRecu`, `date`, `message`) VALUES ('$iduser','Admin','$date','$message')");
+        }
     }
 
     public function InsertIbanBic($iban,$bic, $idfarmer){

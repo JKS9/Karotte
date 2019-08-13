@@ -20,15 +20,17 @@ require "config.php";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Link Bootstrap "Js" -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- Link ajax -->
+    <script type="text/javascript" src="<?= routeUrlBO() ?>src/asset/refreshOffice.js"></script>
 </head>
 <body>
 <?php
 $url = "";
 
-if(isset($_SESSION['Admin'])){
-    require "views/LitleMenu.php";
+if(isset($_SESSION['admin'])){
+     require "views/LitleMenu.php";
 
-    $Pages = array('Menu', 'ListeUtilisateurs','ListeAgriulteurs','ListeAnnonces','ListeProduits','ListeVenteProduit','VerificationAnnonces', 'CommandesUtilisateurs', 'ActiveUtilisateurs','ActiveAgriculteur', 'Messagerie','StatistiquesUtilisateurs','StatistiquesAgriculteurs','StatistiquesStockage');
+    $Pages = array('Menu', 'ListeUtilisateurs','ListeAgriulteurs','ListeAnnonces','ListeProduits','VerificationAnnonces', 'CommandesUtilisateurs', 'ActiveUtilisateurs','ActiveAgriculteur', 'Messagerie','LogOut');
     if (isset($_GET['i'])) {
         $url = explode('/', $_GET['i']);
         if ($url == "") {
@@ -41,7 +43,7 @@ if(isset($_SESSION['Admin'])){
     }else{
         require "views/Menu.php";
     }
-}else{
+}else {
     require "views/connexion.php";
 }
 ?>

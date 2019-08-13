@@ -3,7 +3,7 @@ require "controller/payments.php";
 
 if ($fail) {
     ?>
-    <p>Le token de paiement est invalide</p>
+    <p>the payment token is invalid</p>
     <?php
     return;
 }
@@ -11,4 +11,4 @@ if ($fail) {
 
 ?>
 
-<p>Le paiement a été pris en compte, les articles seront livrés prochainement</p>
+<p>the payment has been taken into account, the items will be delivered soon</p>

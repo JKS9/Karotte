@@ -17,7 +17,7 @@ if (strpos($_GET['p'], '/filters/') !== false) {
                 include "controller/one/OneProducts.php";
             }else{
                 echo "<div class='produits'>
-                    <p>produits introuvables, améliore ta recherche</p>
+                    <p>Product not found, improve your search</p>
                     <hr>
                 </div>";
             }

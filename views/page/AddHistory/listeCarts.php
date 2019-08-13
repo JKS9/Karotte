@@ -2,11 +2,11 @@
     <thead>
     <tr>
         <th style="text-align: center" scope="col">N°</th>
-        <th style="text-align: center" scope="col">Référence</th>
-        <th style="text-align: center" scope="col">Nom</th>
-        <th style="text-align: center" scope="col">Poids</th>
-        <th style="text-align: center" scope="col">Prix</th>
-        <th style="text-align: center" scope="col">actif</th>
+        <th style="text-align: center" scope="col">reference</th>
+        <th style="text-align: center" scope="col">Name</th>
+        <th style="text-align: center" scope="col">Weight</th>
+        <th style="text-align: center" scope="col">Price</th>
+        <th style="text-align: center" scope="col">Actif</th>
         <th style="text-align: center" scope="col">info</th>
     </tr>
     </thead>

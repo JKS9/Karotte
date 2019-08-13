@@ -6,10 +6,10 @@ include "controller/register.php"
         <div class="row">
             <div class="col-sm-3">
                 <div class="register_block_1_button">
-                    <a href="<?= routeUrl() ?>SignUp/users">Je suis un utilisateur</a>
+                    <a href="<?= routeUrl() ?>SignUp/users">I am User</a>
                 </div>
                 <div class="register_block_1_button">
-                    <a href="<?= routeUrl() ?>SignUp/farms">Je suis un agriculteur</a>
+                    <a href="<?= routeUrl() ?>SignUp/farms">I am Farmer</a>
                 </div>
             </div>
             <div class="col-sm-9">

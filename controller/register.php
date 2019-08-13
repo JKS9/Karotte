@@ -44,7 +44,7 @@ if (isset($_POST['signUpUsers'])) {
     if (empty($Name) || empty($FirstName) || empty($Email) || empty($Password)) {
         $error = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez remplir les champs obligatoire :
+                Please complete all required fields :
             </div>";
         return $error;
     }
@@ -52,7 +52,7 @@ if (isset($_POST['signUpUsers'])) {
     if (!preg_match("/^[a-zA-Z-'\s]+$/", "$Name")) {
         $errorSignUpUsersName = "
             <div class='alert alert-danger' role='alert'>
-                Name inscrit incorrecte
+                Incorrect registered Name
             </div>";
         return $errorSignUpUsersName;
     }
@@ -60,7 +60,7 @@ if (isset($_POST['signUpUsers'])) {
     if (!preg_match("/^([a-zA-Z' ]+)$/", "$FirstName")) {
         $errorSignUpUsersFirstName = "
             <div class='alert alert-danger' role='alert'>
-                FirstName inscrit incorrecte
+                 Incorrect registered Surname
             </div>";
         return $errorSignUpUsersFirstName;
 
@@ -69,7 +69,7 @@ if (isset($_POST['signUpUsers'])) {
     if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
         $errorSignUpUsersEmail = "
             <div class='alert alert-danger' role='alert'>
-                Email inscrit incorrecte
+                 Incorrect registered Email
             </div>";
         return $errorSignUpUsersEmail;
     }
@@ -79,7 +79,7 @@ if (isset($_POST['signUpUsers'])) {
     if ($verifEmail === 1) {
         $error = "
             <div class='alert alert-danger' role='alert'>
-                L'email inscrit est déjà utliser sur ce site
+                the registered e-mail is already used
             </div>";
         return $error;
     }
@@ -87,7 +87,7 @@ if (isset($_POST['signUpUsers'])) {
     if (!preg_match("/^[a-z\d_]{5,20}$/i", "$Password")) {
         $errorSignUpUsersPassword = "
             <div class='alert alert-danger' role='alert'>
-               Password inscrit incorrecte
+                Incorrect registered Password
             </div>";
         return $errorSignUpUsersPassword;
     }
@@ -97,7 +97,7 @@ if (isset($_POST['signUpUsers'])) {
     if ($legalAge < 16) {
         $errorSignUpUsersDate = "
             <div class='alert alert-danger' role='alert'>
-                L'age minimum est de 16 ans :
+                the minimum age required is 16 years old
             </div>";
         return $errorSignUpUsersDate;
 
@@ -107,7 +107,7 @@ if (isset($_POST['signUpUsers'])) {
 
     $validation = "
         <div class='alert alert-success' role='alert'>
-            votre compte à été enregistrer avec succé ! Maintenant <a href='" . routeUrl() . "Login' class='alert-link'>connecte toi </a> !
+            Your account has been successfully registered ! Now <a href='" . routeUrl() . "Login' class='alert-link'>log you</a> !
         </div>";
 
 }
@@ -143,7 +143,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (empty($Name) || empty($FirstName) || empty($Email) || empty($Password) || empty($TypeAgriculture) || empty($Road) || empty($NameStreet) || empty($PostalCode) || empty($City) || empty($Region) || empty($Country) || empty($Phone)) {
         $errorFarmers = "
             <div class='alert alert-danger' role='alert'>
-                Veuillez remplir les champs obligatoire :
+                 Please complete all required fields :
             </div>";
         return $errorFarmers;
     }
@@ -151,7 +151,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match("/^[a-zA-Z-'\s]+$/", "$Name")) {
         $errorSignUpFarmersName = "
             <div class='alert alert-danger' role='alert'>
-                Name inscrit incorrecte
+                Incorrect registered Name
             </div>";
         return $errorSignUpFarmersName;
     }
@@ -159,7 +159,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match("/^([a-zA-Z' ]+)$/", "$FirstName")) {
         $errorSignUpFarmersFirstName = "
             <div class='alert alert-danger' role='alert'>
-                FirstName inscrit incorrecte
+                Incorrect registered Surname
             </div>";
         return $errorSignUpFarmersFirstName;
     }
@@ -167,7 +167,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
         $errorSignUpFarmersEmail = "
             <div class='alert alert-danger' role='alert'>
-                Email inscrit incorrecte
+                Incorrect registered Email
             </div>";
         return $errorSignUpFarmersEmail;
     }
@@ -177,7 +177,7 @@ if (isset($_POST['signUpFarmers'])) {
     if ($verifmail === 1) {
         $errorFarmers = "
             <div class='alert alert-danger' role='alert'>
-                L'email inscrit est déjà utliser sur ce site
+                the registered e-mail is already used
             </div>";
         return $errorFarmers;
     }
@@ -185,7 +185,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match("/^[a-z\d_]{5,20}$/i", "$Password")) {
         $errorSignUpFarmersPassword = "
             <div class='alert alert-danger' role='alert'>
-               Password inscrit incorrecte
+               Incorrect registered Password
             </div>";
         return $errorSignUpFarmersPassword;
     }
@@ -195,7 +195,7 @@ if (isset($_POST['signUpFarmers'])) {
     if ($legalAge < 18) {
         $errorSignUpUsersDate = "
             <div class='alert alert-danger' role='alert'>
-                L'age minimum est de 18 ans :
+                the minimum age required is 18 years old
             </div>";
         return $errorSignUpUsersDate;
     }
@@ -203,7 +203,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!in_array($TypeAgriculture, $arrayTypeAgriculture)) {
         $errorSignUpFarmersTypeAgriculture = "
             <div class='alert alert-danger' role='alert'>
-                La valeur sélectionner n'est pas répertorier
+                the selected value is not listed
             </div>";
         return $errorSignUpFarmersTypeAgriculture;
     }
@@ -211,7 +211,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!in_array($Road, $arrayRoad)) {
         $errorSignUpFarmersAdress = "
             <div class='alert alert-danger' role='alert'>
-                La valeur sélectionner n'est pas répertorier
+                the selected value is not listed
             </div>";
         return $errorSignUpFarmersAdress;
     }
@@ -219,7 +219,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match("/^[a-zA-Z- '\s]+$/", "$NameStreet")) {
         $errorSignUpFarmersAdress = "
             <div class='alert alert-danger' role='alert'>
-                Name Street inscrit incorrecte
+               Incorrect registered Name street
             </div>";
         return $errorSignUpFarmersAdress;
     }
@@ -227,7 +227,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match('/^[0-9]*$/', $NumberStreet)) {
         $errorSignUpFarmersAdress = "
             <div class='alert alert-danger' role='alert'>
-                Number Street inscrit incorrecte
+                Incorrect registered Number of street
             </div>";
         return $errorSignUpFarmersAdress;
     }
@@ -235,7 +235,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match('/^[0-9]*$/', $PostalCode)) {
         $errorSignUpFarmersAdress = "
             <div class='alert alert-danger' role='alert'>
-                Postal Code inscrit incorrecte
+                Incorrect registered Postal Code
             </div>";
         return $errorSignUpFarmersAdress;
     }
@@ -243,7 +243,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!preg_match("/^[a-zA-Z- '\s]+$/", $City)) {
         $errorSignUpFarmersAdress = "
             <div class='alert alert-danger' role='alert'>
-                City inscrit incorrecte
+                Incorrect registered City
             </div>";
         return $errorSignUpFarmersAdress;
     }
@@ -251,7 +251,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (!in_array($Country, $arrayCountry)) {
         $errorSignUpFarmersAdress = "
             <div class='alert alert-danger' role='alert'>
-                La valeur sélectionner n'est pas répertorier
+                 the selected value is not listed
             </div>";
         return $errorSignUpFarmersAdress;
     }
@@ -259,7 +259,7 @@ if (isset($_POST['signUpFarmers'])) {
     if (preg_match("/^((\+)33|0)[1-9](\d{2}){4}$/", $Phone)) {
         $errorSignUpFarmersPhone = "
             <div class='alert alert-danger' role='alert'>
-                Numéro de téléphone invalide
+                 Incorrect registered Phone
             </div>";
         return $errorSignUpFarmersPhone;
     }
@@ -272,7 +272,7 @@ if (isset($_POST['signUpFarmers'])) {
 
     $validationFarmers = "
         <div class='alert alert-success' role='alert'>
-            votre compte à été enregistrer avec succé ! Maintenant <a href='" . routeUrl() . "Login' class='alert-link'>connecte toi </a> !
+            Your account has been successfully registered ! Now <a href='" . routeUrl() . "Login' class='alert-link'>log you</a> !
         </div>";
 
 }

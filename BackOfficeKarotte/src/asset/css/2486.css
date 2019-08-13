@@ -41,3 +41,106 @@
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
+
+/*Page liste utilisateur */
+.InfoUtilisateur h4 {
+    padding: 7px 15px;
+    width: 250px;
+    float: left;
+    margin-right: 10px;
+}
+.InfoUtilisateur p {
+    padding: 7px 15px;
+    width: 250px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    float: left;
+    margin-right: 10px;
+}
+
+/* Page Liste Produits */
+.produitInput {
+    padding: 3px 10px;
+    background: #f28853;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+.message {
+    margin : 30px auto;
+}
+.Conversation ul {
+    padding: 0;
+}
+.Conversation ul li {
+    list-style: none;
+    width: 100%;
+    margin: 10px 0px;
+}
+.Conversation ul li a{
+    text-decoration: none;
+    padding: 3px 10px;
+    background: #f28853;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    width: 100%;
+}
+.inputMessageri  {
+   background: #f0f0f0;
+}
+.inputMessageri input {
+    width: 100%;
+    margin: 5px 0px;
+    padding: 5px 5px;
+    height: 40px;
+    border: none;
+ }
+.buttonMessagerie input {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.buttonMessagerie {
+    background: #f0f0f0;
+}
+
+.login_block {
+    width: 350px;
+    margin: 9% auto;
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 5px;
+}
+.login_block_form h4 {
+    text-align: center;
+}
+.input_Login {
+    margin: 5px 0px;
+    text-align: center;
+}
+.input_Login input {
+    padding: 7px 15px;
+    width: 250px;
+    background: #fff;
+    border-radius: 3px;
+    border: none;
+}
+.input_Button_login {
+    text-align: center;
+}
+.input_Button_login input {
+    width: 80px;
+    margin: 9px 0px;
+    border: none;
+    background: #f28853;
+    color: #fff;
+    padding: 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}

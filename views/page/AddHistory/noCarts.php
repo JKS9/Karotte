@@ -1,4 +1,4 @@
 <div class="container block_Ad_Historieno">
-    <p>vous n'avez pas d'annonce de faite</p>
-    <p>faite une annonce ? <a href="<?= routeUrl() ?>AddAnAd">ici</a></p>
+    <p>You have no annoucement made</p>
+    <p>Make an annoucement ? <a href="<?= routeUrl() ?>AddAnAd">right here</a></p>
 </div>

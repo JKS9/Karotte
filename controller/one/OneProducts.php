@@ -55,7 +55,7 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
                         }
                         ?>
                     </select>
-                    <input type="submit" name="addCarts" value="Ajouter au panier">
+                    <input type="submit" name="addCarts" value="Add carts">
                 </form>
             </div>
         </div>
@@ -66,7 +66,7 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
         </div>
         <div class="col-sm-12 products_block_2_select_produit_info_flag_biography">
             <div class="products_block_2_select_produit_info_biography">
-                <strong>Description :</strong>
+                <strong>Biography :</strong>
                 <p><?= $Biographie ?></p>
             </div>
             <div class="products_block_2_select_produit_info_flag">
@@ -113,18 +113,18 @@ foreach ($objProducts->selectOneProduct($url[1]) as $r) {
 
                 ?>
                 <div class="row products_block_2_select_produit_info_farmer_add">
-                    <h4>information sur l'annonceur :</h4>
+                    <h4> Advertiser information :</h4>
                     <div class="col-sm-8 row products_block_2_select_produit_info_farmer_name">
                         <div class="col-sm-6">
                             <p>
-                                Nom : <?= $LastName ?> <?= $name ?>
+                                Full-name : <?= $LastName ?> <?= $name ?>
                             </p>
                         </div>
                         <div class="col-sm-6 products_block_2_select_produit_info_farmer_a">
                             <p>
                                 <strong>
                                     <a href="<?= routeUrl() ?>Farmers/agriculteur=<?= $id ?>">
-                                        visité la ferme
+                                        visit the farm
                                     </a>
                                 </strong>
                             </p>

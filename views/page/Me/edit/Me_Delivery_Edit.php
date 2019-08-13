@@ -9,38 +9,38 @@ if(isset($_SESSION['farmer'])){
         if($nbVerif == '1'){
             ?>
             <div class="row Block_Delivery_Edit_From">
-                <h4>Modifier mon adresse de livraison :</h4>
+                <h4>Edit my delivery adress :</h4>
                 <?= $errorinfoDelivery ?>
                 <form method="post">
                     <?php
                     foreach($verifDelivery as $delivery){
                         ?>
                         <div class="col-md-12">
-                            <label>Numéro de rue :</label>
+                            <label>Number street :</label>
                             <input type="text" name="roadNumber" value="<?= $delivery['RoadNumber']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>rue :</label>
+                            <label>Street :</label>
                             <input type="text" name="Road" value="<?= $delivery['Road']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Nom de rue :</label>
+                            <label>Name of the street :</label>
                             <input type="text" name="RoadName" value="<?= $delivery['RoadName']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Ville :</label>
+                            <label>City :</label>
                             <input type="text" name="City" value="<?= $delivery['City']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Code postal :</label>
+                            <label>Postal code :</label>
                             <input type="text" name="PostalCode" value="<?= $delivery['PostalCode']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Département :</label>
+                            <label>Department :</label>
                             <label><?= $objProfile->infoRegion($delivery['Region']) ?> (<?= $delivery['Region'] ?>) </label>
                         </div>
                         <div class="col-md-12">
-                            <label>Nouveau département :</label>
+                            <label>New department :</label>
                             <select name="Region">
                                 <?php
                                 foreach($selectRegion as $key => $value){
@@ -62,7 +62,7 @@ if(isset($_SESSION['farmer'])){
                             <input type="number" name="Phone" value="<?= $delivery['Phone']?>">
                         </div>
                         <div class="col-md-12 editDeliveryOne">
-                            <input type="submit" name="infoDelivery" value="sauvgarder">
+                            <input type="submit" name="infoDelivery" value="Save">
                         </div>
                         <?php
                     }
@@ -73,7 +73,7 @@ if(isset($_SESSION['farmer'])){
         }else{
             ?>
             <div class="row Block_Delivery_Edit_From">
-                <p>L'adresse rechercher est introuvable</p>
+                <p>the searched address was not found</p>
             </div>
             <?php
         }
@@ -83,7 +83,7 @@ if(isset($_SESSION['farmer'])){
     }else{
         ?>
         <div class="row Block_Delivery_Edit_From">
-            <p>L'adresse rechercher est introuvable</p>
+            <p>the searched address was not found</p>
         </div>
         <?php
     }
@@ -95,38 +95,38 @@ if(isset($_SESSION['farmer'])){
         if($nbVerif == '1'){
             ?>
             <div class="row Block_Delivery_Edit_From">
-                <h4>Modifier mon adresse de livraison :</h4>
+                <h4>Edit my delivery adress :</h4>
                 <?= $errorinfoDelivery ?>
                 <form method="post">
                     <?php
                     foreach($verifDelivery as $delivery){
                         ?>
                         <div class="col-md-12">
-                            <label>Numéro de rue :</label>
+                            <label>Number street :</label>
                             <input type="text" name="roadNumber" value="<?= $delivery['RoadNumber']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>rue :</label>
+                            <label>street :</label>
                             <input type="text" name="Road" value="<?= $delivery['Road']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Nom de rue :</label>
+                            <label>Name of the street :</label>
                             <input type="text" name="RoadName" value="<?= $delivery['RoadName']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Ville :</label>
+                            <label>City :</label>
                             <input type="text" name="City" value="<?= $delivery['City']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Code postal :</label>
+                            <label>POstal code :</label>
                             <input type="text" name="PostalCode" value="<?= $delivery['PostalCode']?>">
                         </div>
                         <div class="col-md-12">
-                            <label>Département :</label>
+                            <label>Department :</label>
                             <label><?= $objProfile->infoRegion($delivery['Region']) ?> (<?= $delivery['Region'] ?>) </label>
                         </div>
                         <div class="col-md-12">
-                            <label>Nouveau département :</label>
+                            <label>New department :</label>
                             <select name="Region">
                                 <?php
                                 foreach($selectRegion as $key => $value){
@@ -148,7 +148,7 @@ if(isset($_SESSION['farmer'])){
                             <input type="number" name="Phone" value="<?= $delivery['Phone']?>">
                         </div>
                         <div class="col-md-12 editDeliveryOne">
-                            <input type="submit" name="infoDelivery" value="sauvgarder">
+                            <input type="submit" name="infoDelivery" value="Save">
                         </div>
                         <?php
                     }
@@ -159,7 +159,7 @@ if(isset($_SESSION['farmer'])){
         }else{
             ?>
             <div class="row Block_Delivery_Edit_From">
-                <p>L'adresse rechercher est introuvable</p>
+                <p>the searched address was not found</p>
             </div>
             <?php
         }
@@ -169,7 +169,7 @@ if(isset($_SESSION['farmer'])){
     }else{
         ?>
         <div class="row Block_Delivery_Edit_From">
-            <p>L'adresse rechercher est introuvable</p>
+            <p>the searched address was not found</p>
         </div>
         <?php
     }

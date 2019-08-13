@@ -27,7 +27,7 @@ foreach ($objFarmers->infoUserFarmers($url[1]) as $infoFarmer){
                     <p><strong><?= $LastName . ' ' . $Name ?></strong></p>
                 </div>
                 <div class="products_block_2_select_produit_info_biography">
-                    <strong>Description :</strong>
+                    <strong>Biography :</strong>
                     <p><?= $Biography ?></p>
                     <div class="farmer_type">
                         <?php
@@ -65,7 +65,7 @@ foreach ($objFarmers->infoUserFarmers($url[1]) as $infoFarmer){
                     ?>
                 </div>
                 <div class="products_block_2_select_produit_info_ferme">
-                    <h4>Adresse de la ferme :</h4>
+                    <h4>Adress of the farm :</h4>
                     <p>
                         <?= $roadNumber . " " . $Road . " " . $RoadName ?>
                     </p>
@@ -104,7 +104,7 @@ foreach ($objFarmers->infoUserFarmers($url[1]) as $infoFarmer){
             </div>
         </div>
         <div class="col-sm-12 farmers_block_2_select_farmer_product">
-            <h2>Annonces :</h2>
+            <h2>Ad :</h2>
             <div class="row">
             <?php
             foreach ($objFarmers->listeProduitsFarmer($idFarmer)as $produits){

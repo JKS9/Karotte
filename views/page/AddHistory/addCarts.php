@@ -1,3 +1,3 @@
 <div class="container-fluid no-padding block_Ad_HistorieNoSelect">
-    <p>veuillez choisir une annonce pour plus d'information</p>
+    <p>Please choose an advert for more information</p>
 </div>

@@ -8,8 +8,8 @@ class Login extends connect {
 
     public function login($email,$password)
     {
-        $errorBan = "Votre compte à été désactiver par un administrateur ";
-        $errorMatch = "Email, Password ou compte invilide, veuillez recommencez avec de nouvelles informations ";
+        $errorBan = "Your account has been disabled by an adminatrator";
+        $errorMatch = "Email, Password or account invalide";
 
         $status = "";
         $type = "";
